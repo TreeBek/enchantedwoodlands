@@ -18,6 +18,6 @@ public class EnchantWoodsTab extends CreativeTabs
     }
     public String getTranslatedTabLabel()
     {
-        return "VanillaPlus Blocks";
+        return "Enchanted Woodlands";
     }
 }
