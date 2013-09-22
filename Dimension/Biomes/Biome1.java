@@ -43,7 +43,7 @@ this.spawnableCreatureList.clear();
 this.spawnableWaterCreatureList.clear();
 this.worldGeneratorSwamp = new WorldGenSwamp();
 this.theBiomeDecorator.treesPerChunk = 40;
-this.topBlock = ((byte)Block.grass.blockID);
+this.topBlock = ((byte)Block.stone.blockID);
 this.fillerBlock = ((byte)Block.dirt.blockID);
 //this.WorldGenTutorialTrees = new WorldGenTutorialTree(false);
 this.setBiomeName("Biome1");

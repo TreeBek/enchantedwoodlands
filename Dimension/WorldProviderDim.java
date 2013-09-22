@@ -1,6 +1,17 @@
 package Mod.enchantedwoodlands.Dimension;
 
-
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.entity.Entity;
+import net.minecraft.util.ChunkCoordinates;
+import net.minecraft.util.MathHelper;
+import net.minecraft.util.Vec3;
+import net.minecraft.util.Vec3Pool;
+import net.minecraft.world.World;
+import net.minecraft.world.WorldProvider;
+import net.minecraft.world.biome.WorldChunkManagerHell;
+import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.Vec3;
@@ -8,68 +19,77 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldProvider;
 import net.minecraft.world.WorldProviderHell;
 import net.minecraft.world.chunk.IChunkProvider;
-import net.minecraftforge.client.IRenderHandler;
 import net.minecraftforge.common.DimensionManager;
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class WorldProviderDim extends WorldProvider
-{	
-	public void registerWorldChunkManager()
-	{
-		/** tells Minecraft to use our new WorldChunkManager **/
-		this.worldChunkMgr = new WorldChunkMangerDim(worldObj.getSeed(), terrainType);
-		this.hasNoSky = false;
-	}
+{
+public void registerWorldChunkManager()
+{
+/** tells Minecraft to use our new WorldChunkManager **/
+this.worldChunkMgr = new WorldChunkMangerDim(worldObj.getSeed(), terrainType);
+this.hasNoSky = false;
+}
+@Override
+public Vec3 getSkyColor(Entity cameraEntity, float partialTicks)
+{
+         return this.worldObj.getWorldVec3Pool().getVecFromPool(0, 0.2, 0.3);
+}
 
-	@Override
-	/** Dimension Name **/
-	public String getDimensionName()
-	{
-		return "Enchanted Woodlands";
-	}
+@Override
+public boolean isSkyColored()
+{
+         return true;
+}
 
-	/** Get Provider for dimension **/
-	public static WorldProvider getProviderForDimension(int id)
-	{
-		return DimensionManager.createProviderFor(DimensionIDsMulti.DIMID_2);
-	}
+@Override
+/** Dimension Name **/
+public String getDimensionName()
+{
+return "Mythical";
+}
 
-	/** Welcome message **/
-	public String getWelcomeMessage()
-	{
-		return "Entering the Enchanted Woodlands";
-	}
+/** Get Provider for dimension **/
+public static WorldProvider getProviderForDimension(int id)
+{
+return DimensionManager.createProviderFor(Dimension.DimID);
+}
 
-	/** What chunk provider to use **/
-	public IChunkProvider createChunkGenerator()
-	{
-		return new ChunkProviderDim(worldObj, worldObj.getSeed(), true);
-	}
+/** Welcome message **/
+public String getWelcomeMessage()
+{
+return "Entering the Slime Valley Dimension";
+}
 
-	/** Can player re-spawn here **/
-	public boolean canRespawnHere()
-	{
-		return false;
-	}
+/** What chunk provider to use **/
+public IChunkProvider createChunkGenerator()
+{
+return new ChunkProviderDim(worldObj, worldObj.getSeed(), true);
+}
 
-	/** Set user message **/
-	// not sure if this works any more ?
-	protected synchronized String setUserMessage(String par1Str)
-	{
-		return "Building Woodlands Dimension";
-	}
+/** Can player re-spawn here **/
+public boolean canRespawnHere()
+{
+return false;
+}
 
-	/** Determines the dimension the player will be respawned in **/
-	public int getRespawnDimension(EntityPlayerMP player)
-	{
-		return 0;
-	}
+/** Set user message **/
+// not sure if this works any more ?
+protected synchronized String setUserMessage(String par1Str)
+{
+return "Building Slime Valley Dimension";
+}
 
-	/** Dimension Movement speed **/
-	public double getMovementFactor()
-	{
-		return 10.0;
-	}
+/** Determines the dimension the player will be respawned in **/
+public int getRespawnDimension(EntityPlayerMP player)
+{
+return 0;
+}
+
+/** Dimension Movement speed **/
+public double getMovementFactor()
+{
+return 10.0;
+}
 }

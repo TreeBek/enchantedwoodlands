@@ -11,15 +11,14 @@ import net.minecraft.block.material.Material;
 public class Blocks {
 	
 	//Block Declaration
-	public static Block mythicalStone;
+	public static final Block mythicalStone = new BlockBaseBlock(2500, Material.rock).setHardness(5.0f).setUnlocalizedName("mythicalStone");
 	public static BlockWoodlandsPortal woodlandsPortal;
 	public static BlockWoodlandsFire woodlandsFire;
 	public static Block testSapling;
-	public static Block woodlandGrass;
+	public static final Block woodlandGrass = new BlockWoodlandGrass(2504).setHardness(0.7f).setUnlocalizedName("woodlandGrass");
 	
 	public static void Init(){
 		
-		mythicalStone = new BlockBaseBlock(Common.mythicalStoneID, Material.rock).setHardness(5.0f).setUnlocalizedName("mythicalStone");
 			GameRegistry.registerBlock(mythicalStone, Common.modid + mythicalStone.getUnlocalizedName().substring(5));
 				LanguageRegistry.addName(mythicalStone, "Mythical Stone");
 				
@@ -35,7 +34,6 @@ public class Blocks {
 			GameRegistry.registerBlock(testSapling, Common.modid + testSapling.getUnlocalizedName().substring(5));
 				LanguageRegistry.addName(testSapling, "Test Sapling");
 				
-		woodlandGrass = new BlockWoodlandGrass(Common.woodlandGrassID).setHardness(0.7f).setUnlocalizedName("woodlandGrass");
 			GameRegistry.registerBlock(woodlandGrass, Common.modid + woodlandGrass.getUnlocalizedName().substring(5));
 				LanguageRegistry.addName(woodlandGrass, "Woodland Grass");
 					

@@ -7,7 +7,7 @@ import net.minecraftforge.common.DimensionManager;
 
 public class Dimension {
 
-	public static int DimID = DimensionIDsMulti.DIMID_2;
+	public static int DimID = 5;
 	
 	public static final BiomeGenBase Biome1 = new Biome1(27); 
 	public static final BiomeGenBase Biome2 = new Biome2(28);
