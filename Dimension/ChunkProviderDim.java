@@ -193,7 +193,7 @@ public class ChunkProviderDim implements IChunkProvider {
 
 							for (int k2 = 0; k2 < 4; ++k2) {
 								if ((d16 += d15) > 0.0D) {
-									par3ArrayOfByte[j2 += short1] = (byte) Blocks.mythicalStone.blockID;//Block.stone.blockID;
+									par3ArrayOfByte[j2 += short1] = (byte) Block.stone.blockID;//Block.stone.blockID;
 								} else if (k1 * 8 + l1 < b2) {
 									par3ArrayOfByte[j2 += short1] = (byte) Block.waterStill.blockID;
 								} else {

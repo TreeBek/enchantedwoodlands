@@ -25,6 +25,7 @@ public class Common {
 	   public static int woodlandsPortalID;
 	   public static int woodlandsFireID;
 	   public static int testSaplingID;
+	   public static int woodlandGrassID;
 	
 	   //Item ID
 	   public static int teleWandID;
@@ -40,6 +41,7 @@ public class Common {
 			woodlandsPortalID = config.get(Configuration.CATEGORY_BLOCK, "Enchanted-Woodlands Portal", 2501).getInt();
 			woodlandsFireID = config.get(Configuration.CATEGORY_BLOCK, "Enchanted-Woodlands Fire", 2502).getInt();
 			testSaplingID = config.get(Configuration.CATEGORY_BLOCK, "Test Sapling", 2503).getInt();
+			woodlandGrassID = config.get(Configuration.CATEGORY_BLOCK, "woodland Grass", 2504).getInt();
 			
 			teleWandID = config.get(Configuration.CATEGORY_ITEM, "Tele-Wand", 7002).getInt();
 			woodlandsLighterID = config.get(Configuration.CATEGORY_ITEM, "Woodlands Lighter", 7003).getInt();

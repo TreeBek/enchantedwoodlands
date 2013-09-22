@@ -15,6 +15,7 @@ public class Blocks {
 	public static BlockWoodlandsPortal woodlandsPortal;
 	public static BlockWoodlandsFire woodlandsFire;
 	public static Block testSapling;
+	public static Block woodlandGrass;
 	
 	public static void Init(){
 		
@@ -33,6 +34,11 @@ public class Blocks {
 		testSapling = new BlockTestSapling(Common.testSaplingID, 0).setUnlocalizedName("testSapling");
 			GameRegistry.registerBlock(testSapling, Common.modid + testSapling.getUnlocalizedName().substring(5));
 				LanguageRegistry.addName(testSapling, "Test Sapling");
+				
+		woodlandGrass = new BlockWoodlandGrass(Common.woodlandGrassID).setHardness(0.7f).setUnlocalizedName("woodlandGrass");
+			GameRegistry.registerBlock(woodlandGrass, Common.modid + woodlandGrass.getUnlocalizedName().substring(5));
+				LanguageRegistry.addName(woodlandGrass, "Woodland Grass");
+					
 	}
 
 }
