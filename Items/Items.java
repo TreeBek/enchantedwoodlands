@@ -2,7 +2,6 @@ package Mod.enchantedwoodlands.Items;
 
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import Mod.enchantedwoodlands.Common.Common;
-import mythicalRPG.ItemTutorialFlintAndSteel;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.Configuration;
 

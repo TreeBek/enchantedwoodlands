@@ -4,7 +4,6 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import Mod.enchantedwoodlands.Common.Common;
 import Mod.enchantedwoodlands.Dimension.Plants.BlockTestSapling;
-import mythicalRPG.BlockMythicalPortal;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
