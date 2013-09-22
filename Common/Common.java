@@ -16,7 +16,7 @@ public class Common {
 	@EventHandler
 	public static void Init(FMLInitializationEvent event){
 		
-		Block.Init();
+		Blocks.Init();
 		
 	}
 
