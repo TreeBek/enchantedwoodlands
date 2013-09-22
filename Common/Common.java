@@ -8,6 +8,6 @@ import cpw.mods.fml.common.network.NetworkMod;
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class Common {
 	
-	public static final String modid = "Enchantedwoodlands";
+	public static final String modid = "EnchantedWoodlands";
 
 }
