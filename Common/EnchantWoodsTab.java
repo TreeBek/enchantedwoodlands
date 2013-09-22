@@ -14,7 +14,7 @@ public class EnchantWoodsTab extends CreativeTabs
     @SideOnly(Side.CLIENT)
     public int getTabIconItemIndex()
     {
-        return Blocks.testBlock.blockID;
+        return Blocks.mythicalStone.blockID;
     }
     public String getTranslatedTabLabel()
     {
