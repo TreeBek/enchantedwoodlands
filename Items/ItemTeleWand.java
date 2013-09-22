@@ -1,5 +1,6 @@
 package Mod.enchantedwoodlands.Items;
 
+import vanillaplus.VanillaPlus;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import Mod.enchantedwoodlands.Common.Common;
