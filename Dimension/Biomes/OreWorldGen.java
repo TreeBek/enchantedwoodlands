@@ -56,13 +56,15 @@ public class OreWorldGen implements IWorldGenerator
     public void generateSurface(World world, Random rand, int chunkX, int chunkZ)
     {
        // 30 veins of ore per chunk
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < 40; i++)
         {
             //16x16 area up to y = 64
             int randPosX = chunkX + rand.nextInt(16);
-            int randPosY = rand.nextInt(20);
+            int randPosY = rand.nextInt(50);
             int randPosZ = chunkZ + rand.nextInt(16);
-            // 10 blocks per vein
+            	
+            (new WorldGenMinable(Block.glowStone.blockID, 10)).generate(world, rand,
+        			randPosX, randPosY, randPosZ);
         }
         for (int i = 0; i < 15; i++)
         {
@@ -104,7 +106,7 @@ public class OreWorldGen implements IWorldGenerator
     int zCoord = chunkZ + random.nextInt(16);
     //The 20 on the line below is how meny will generate per vain, as an example i think diamond is like 2 or 4
     //and the Block.blockIron is what it will spawn
-    (new WorldGenMinableSlimeValley(Block.glowStone.blockID, 5)).generate(world, random, xCoord, yCoord, zCoord);
+    (new WorldGenMinable(Block.glowStone.blockID, 5)).generate(world, random, xCoord, yCoord, zCoord);
     }
     for(int k = 0; k < 4; k++); //Creates a new integer, 'k', which is between 0 and whatever we used for the rarity.
     

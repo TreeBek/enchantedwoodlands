@@ -38,28 +38,28 @@ for (int y = 1; y < 5; y++)
          }
          }
 }
-par3World.setBlock(X, Y + 1, Z, Block.oreDiamond.blockID);
-par3World.setBlock(X + 1, Y + 1, Z, Block.oreDiamond.blockID);
+par3World.setBlock(X, Y + 1, Z, Block.wood.blockID);
+par3World.setBlock(X + 1, Y + 1, Z, Block.wood.blockID);
 par3World.setBlock(X, Y + 2, Z, Block.blockDiamond.blockID);
 par3World.setBlock(X + 1, Y + 2, Z, Block.blockDiamond.blockID);
-par3World.setBlock(X + 2, Y + 2, Z, Block.oreDiamond.blockID);
-par3World.setBlock(X - 1, Y + 2, Z, Block.oreDiamond.blockID);
-par3World.setBlock(X + 3, Y + 3, Z, Block.oreDiamond.blockID);
-par3World.setBlock(X - 2, Y + 3, Z, Block.oreDiamond.blockID);
+par3World.setBlock(X + 2, Y + 2, Z, Block.wood.blockID);
+par3World.setBlock(X - 1, Y + 2, Z, Block.wood.blockID);
+par3World.setBlock(X + 3, Y + 3, Z, Block.wood.blockID);
+par3World.setBlock(X - 2, Y + 3, Z, Block.wood.blockID);
 par3World.setBlock(X + 2, Y + 3, Z, Block.blockDiamond.blockID);
 par3World.setBlock(X - 1, Y + 3, Z, Block.blockDiamond.blockID);
-par3World.setBlock(X + 3, Y + 4, Z, Block.oreDiamond.blockID);
-par3World.setBlock(X - 2, Y + 4, Z, Block.oreDiamond.blockID);
+par3World.setBlock(X + 3, Y + 4, Z, Block.wood.blockID);
+par3World.setBlock(X - 2, Y + 4, Z, Block.wood.blockID);
 par3World.setBlock(X + 2, Y + 4, Z, Block.blockDiamond.blockID);
 par3World.setBlock(X - 1, Y + 4, Z, Block.blockDiamond.blockID);
-par3World.setBlock(X + 3, Y + 5, Z, Block.oreDiamond.blockID);
-par3World.setBlock(X - 2, Y + 5, Z, Block.oreDiamond.blockID);
+par3World.setBlock(X + 3, Y + 5, Z, Block.wood.blockID);
+par3World.setBlock(X - 2, Y + 5, Z, Block.wood.blockID);
 par3World.setBlock(X + 2, Y + 5, Z, Block.blockDiamond.blockID);
 par3World.setBlock(X - 1, Y + 5, Z, Block.blockDiamond.blockID);
-par3World.setBlock(X + 2, Y + 6, Z, Block.oreDiamond.blockID);
-par3World.setBlock(X - 1, Y + 6, Z, Block.oreDiamond.blockID);
-par3World.setBlock(X, Y + 7, Z, Block.oreDiamond.blockID);
-par3World.setBlock(X + 1, Y + 7, Z, Block.oreDiamond.blockID);
+par3World.setBlock(X + 2, Y + 6, Z, Block.wood.blockID);
+par3World.setBlock(X - 1, Y + 6, Z, Block.wood.blockID);
+par3World.setBlock(X, Y + 7, Z, Block.wood.blockID);
+par3World.setBlock(X + 1, Y + 7, Z, Block.wood.blockID);
 par3World.setBlock(X, Y + 6, Z, Block.blockDiamond.blockID);
 par3World.setBlock(X + 1, Y + 6, Z, Block.blockDiamond.blockID);
 par3World.setBlock(X, Y + 3, Z, Blocks.woodlandFire.blockID);
@@ -77,28 +77,28 @@ for (int y = 1; y < 5; y++)
          }
          }
 }
-par3World.setBlock(X, Y + 1, Z, Block.oreDiamond.blockID);
-par3World.setBlock(X + 1, Y + 1, Z, Block.oreDiamond.blockID);
+par3World.setBlock(X, Y + 1, Z, Block.wood.blockID);
+par3World.setBlock(X + 1, Y + 1, Z, Block.wood.blockID);
 par3World.setBlock(X, Y + 2, Z, Block.blockDiamond.blockID);
 par3World.setBlock(X + 1, Y + 2, Z, Block.blockDiamond.blockID);
-par3World.setBlock(X + 2, Y + 2, Z, Block.oreDiamond.blockID);
-par3World.setBlock(X - 1, Y + 2, Z, Block.oreDiamond.blockID);
-par3World.setBlock(X + 3, Y + 3, Z, Block.oreDiamond.blockID);
-par3World.setBlock(X - 2, Y + 3, Z, Block.oreDiamond.blockID);
+par3World.setBlock(X + 2, Y + 2, Z, Block.wood.blockID);
+par3World.setBlock(X - 1, Y + 2, Z, Block.wood.blockID);
+par3World.setBlock(X + 3, Y + 3, Z, Block.wood.blockID);
+par3World.setBlock(X - 2, Y + 3, Z, Block.wood.blockID);
 par3World.setBlock(X + 2, Y + 3, Z, Block.blockDiamond.blockID);
 par3World.setBlock(X - 1, Y + 3, Z, Block.blockDiamond.blockID);
-par3World.setBlock(X + 3, Y + 4, Z, Block.oreDiamond.blockID);
-par3World.setBlock(X - 2, Y + 4, Z, Block.oreDiamond.blockID);
+par3World.setBlock(X + 3, Y + 4, Z, Block.wood.blockID);
+par3World.setBlock(X - 2, Y + 4, Z, Block.wood.blockID);
 par3World.setBlock(X + 2, Y + 4, Z, Block.blockDiamond.blockID);
 par3World.setBlock(X - 1, Y + 4, Z, Block.blockDiamond.blockID);
-par3World.setBlock(X + 3, Y + 5, Z, Block.oreDiamond.blockID);
-par3World.setBlock(X - 2, Y + 5, Z, Block.oreDiamond.blockID);
+par3World.setBlock(X + 3, Y + 5, Z, Block.wood.blockID);
+par3World.setBlock(X - 2, Y + 5, Z, Block.wood.blockID);
 par3World.setBlock(X + 2, Y + 5, Z, Block.blockDiamond.blockID);
 par3World.setBlock(X - 1, Y + 5, Z, Block.blockDiamond.blockID);
-par3World.setBlock(X + 2, Y + 6, Z, Block.oreDiamond.blockID);
-par3World.setBlock(X - 1, Y + 6, Z, Block.oreDiamond.blockID);
-par3World.setBlock(X, Y + 7, Z, Block.oreDiamond.blockID);
-par3World.setBlock(X + 1, Y + 7, Z, Block.oreDiamond.blockID);
+par3World.setBlock(X + 2, Y + 6, Z, Block.wood.blockID);
+par3World.setBlock(X - 1, Y + 6, Z, Block.wood.blockID);
+par3World.setBlock(X, Y + 7, Z, Block.wood.blockID);
+par3World.setBlock(X + 1, Y + 7, Z, Block.wood.blockID);
 par3World.setBlock(X, Y + 6, Z, Block.blockDiamond.blockID);
 par3World.setBlock(X + 1, Y + 6, Z, Block.blockDiamond.blockID);
 par3World.setBlock(X, Y + 3, Z, Blocks.woodlandFire.blockID);
