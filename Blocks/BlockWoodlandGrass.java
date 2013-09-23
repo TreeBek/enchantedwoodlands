@@ -112,12 +112,12 @@ public void registerIcons(IconRegister par1IconRegister)
 
 this.blockIcon = par1IconRegister.registerIcon("EnchantedWoodlands:woodlandsGrass_side");
 this.iconGrassTop = par1IconRegister.registerIcon("EnchantedWoodlands:woodlandsGrass_top");
-this.iconGrassBottom = par1IconRegister.registerIcon("EnchantedWoodlands:grass_bottom");
+this.iconGrassBottom = par1IconRegister.registerIcon("EnchantedWoodlands:dirt_bottom");
 this.iconGrassSideOverlay = par1IconRegister.registerIcon("EnchantedWoodlands:woodlandsGrass_side_overlay");
 
 this.blockIcon = par1IconRegister.registerIcon("EnchantedWoodlands:woodlandGrass_side");
 this.iconGrassTop = par1IconRegister.registerIcon("EnchantedWoodlands:woodlandGrass_top");
-this.iconGrassBottom = par1IconRegister.registerIcon("EnchantedWoodlands:grass_bottom");
+this.iconGrassBottom = par1IconRegister.registerIcon("EnchantedWoodlands:dirt_bottom");
 this.iconGrassSideOverlay = par1IconRegister.registerIcon("EnchantedWoodlands:woodlandGrass_side_overlay");
 
 }
