@@ -109,24 +109,15 @@ return this.blockIcon;
 */
 public void registerIcons(IconRegister par1IconRegister)
 {
-this.blockIcon = par1IconRegister.registerIcon("MythicalRPG:starDustGrass_side");
-this.iconGrassTop = par1IconRegister.registerIcon("MythicalRPG:starDustGrass_top");
-this.iconGrassBottom = par1IconRegister.registerIcon("MythicalRPG:starDustGrass_bottom");
-this.iconGrassSideOverlay = par1IconRegister.registerIcon("MythicalRPG:starDustGrass_side_overlay");
+this.blockIcon = par1IconRegister.registerIcon("EnchantedWoodlands:starDustGrass_side");
+this.iconGrassTop = par1IconRegister.registerIcon("EnchantedWoodlands:starDustGrass_top");
+this.iconGrassBottom = par1IconRegister.registerIcon("EnchantedWoodlands:dirt_bottom");
+this.iconGrassSideOverlay = par1IconRegister.registerIcon("EnchantedWoodlands:starDustGrass_side_overlay");
 }
 
 @SideOnly(Side.CLIENT)
 public static Icon getIconSideOverlay()
 {
 return iconGrassSideOverlay;
-}
-public void randomDisplayTick(World par1World, int par2, int par3, int par4, Random par5Random)
-{
-    super.randomDisplayTick(par1World, par2, par3, par4, par5Random);
-
-    if (par5Random.nextInt(10) == 0)
-    {
-        par1World.spawnParticle("splash", (double)((float)par2 + par5Random.nextFloat()), (double)((float)par3 + 1.1F), (double)((float)par4 + par5Random.nextFloat()), 0.0D, 0.0D, 0.0D);
-    }
 }
 }
