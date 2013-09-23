@@ -28,7 +28,7 @@ protected BlockWoodlandGrass(int par1)
 {
 super(par1, Material.grass);
 this.setTickRandomly(true);
-this.setCreativeTab(Common.EnchantedWoodslandsTab);
+this.setCreativeTab(Common.EnchWoodRPGTab);
 this.setStepSound(soundGrassFootstep);
 }
 
@@ -109,10 +109,17 @@ return this.blockIcon;
 */
 public void registerIcons(IconRegister par1IconRegister)
 {
+
 this.blockIcon = par1IconRegister.registerIcon("EnchantedWoodlands:woodlandsGrass_side");
 this.iconGrassTop = par1IconRegister.registerIcon("EnchantedWoodlands:woodlandsGrass_top");
 this.iconGrassBottom = par1IconRegister.registerIcon("EnchantedWoodlands:woodlandsGrass_bottom");
 this.iconGrassSideOverlay = par1IconRegister.registerIcon("EnchantedWoodlands:woodlandsGrass_side_overlay");
+
+this.blockIcon = par1IconRegister.registerIcon("EnchantedWoodlands:woodlandGrass_side");
+this.iconGrassTop = par1IconRegister.registerIcon("EnchantedWoodlands:woodlandGrass_top");
+this.iconGrassBottom = par1IconRegister.registerIcon("EnchantedWoodlands:woodlandGrass_bottom");
+this.iconGrassSideOverlay = par1IconRegister.registerIcon("EnchantedWoodlands:woodlandGrass_side_overlay");
+
 }
 
 @SideOnly(Side.CLIENT)
@@ -120,4 +127,13 @@ public static Icon getIconSideOverlay()
 {
 return iconGrassSideOverlay;
 }
+
+
+
+public void randomDisplayTick(World par1World, int par2, int par3, int par4, Random par5Random)
+{
+    super.randomDisplayTick(par1World, par2, par3, par4, par5Random);
+
 }
+}
+

@@ -17,15 +17,20 @@ public class ItemTeleWand extends Item{
 
 	public ItemTeleWand(int par1) {
 		super(par1);
-		this.setCreativeTab(Common.EnchantedWoodslandsTab);
+		this.setCreativeTab(Common.EnchWoodRPGTab);
 	}
 
 	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
     {
-		par3EntityPlayer.travelToDimension(5);
-		return par1ItemStack;
-		
-		
+			int PlayerDimension = par3EntityPlayer.dimension;
+  
+				if(PlayerDimension == 2){
+   
+					par3EntityPlayer.travelToDimension(0);
+					return par1ItemStack;
+   
+				}else return par1ItemStack;
+  
     }
 	
    

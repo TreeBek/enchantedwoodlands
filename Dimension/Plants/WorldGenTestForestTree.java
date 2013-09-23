@@ -4,6 +4,8 @@ import java.util.Random;
 
 
 
+
+import Mod.enchantedwoodlands.Blocks.BlockStarDustSapling;
 import Mod.enchantedwoodlands.Blocks.Blocks;
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
@@ -74,7 +76,7 @@ public class WorldGenTestForestTree extends WorldGenerator
 			{
 				i1 = par1World.getBlockId(par3, par4 - 1, par5);
 				Block soil = Block.blocksList[i1];
-				boolean isValidSoil = soil != null && soil.canSustainPlant(par1World, par3, par4 - 1, par5, ForgeDirection.UP, (BlockTestSapling)Blocks.testSapling);
+				boolean isValidSoil = soil != null && soil.canSustainPlant(par1World, par3, par4 - 1, par5, ForgeDirection.UP, (BlockStarDustSapling)Blocks.starDustSapling);
 
 				if (isValidSoil && par4 < 256 - l - 1)
 				{
@@ -101,7 +103,7 @@ public class WorldGenTestForestTree extends WorldGenerator
 
 									if (block == null || block.canBeReplacedByLeaves(par1World, l1, i2, k2))
 									{
-										this.setBlockAndMetadata(par1World, l1, i2, k2, Block.leaves.blockID, 0);
+										this.setBlockAndMetadata(par1World, l1, i2, k2, Blocks.starDustLeaf.blockID, 0);
 									}
 								}
 							}
@@ -116,7 +118,7 @@ public class WorldGenTestForestTree extends WorldGenerator
 
 						if (j1 == 0 || block == null || block.isLeaves(par1World, par3, par4 + i2, par5))
 						{
-							this.setBlockAndMetadata(par1World, par3, par4 + i2, par5,Block.wood.blockID, 0);
+							this.setBlockAndMetadata(par1World, par3, par4 + i2, par5,Blocks.starDustLog.blockID, 0);
 						}
 					}
 

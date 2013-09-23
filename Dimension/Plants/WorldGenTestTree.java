@@ -4,6 +4,8 @@ import java.util.Random;
 
 
 
+
+import Mod.enchantedwoodlands.Blocks.BlockStarDustSapling;
 import Mod.enchantedwoodlands.Blocks.Blocks;
 import net.minecraft.block.Block;
 import net.minecraft.util.Direction;
@@ -65,11 +67,11 @@ public class WorldGenTestTree extends WorldGenerator implements IWorldGenerator
 						{
 							k1 = par1World.getBlockId(l1, i1 -1, j1);
 							/** Custom grass block **/
-							Block block = Block.grass;
+							Block block = Blocks.woodlandGrass;
 							if (k1 != 0 && !block.isLeaves(par1World, l1, i1, j1)
 
 									/** Custom grass block **/
-									&& k1 != Block.grass.blockID
+									&& k1 != Blocks.woodlandGrass.blockID
 									&& k1 != Block.dirt.blockID
 									&& !block.isWood(par1World, l1, i1, j1))
 							{
@@ -92,10 +94,10 @@ public class WorldGenTestTree extends WorldGenerator implements IWorldGenerator
 				i1 = par1World.getBlockId(par3, par4 - 1, par5);
 
 				/** Custom grass block **/
-				Block soil = Block.grass;
+				Block soil = Blocks.woodlandGrass;
 
 				/** Custom Sapling block **/
-				boolean isSoil = (soil != null && soil.canSustainPlant(par1World, par3, par4 - 1, par5, ForgeDirection.UP, (BlockTestSapling)Blocks.testSapling));
+				boolean isSoil = (soil != null && soil.canSustainPlant(par1World, par3, par4 - 1, par5, ForgeDirection.UP, (BlockStarDustSapling)Blocks.starDustSapling));
 				if (isSoil && par4 < 256 - l - 1)
 				{
 					soil.onPlantGrow(par1World, par3, par4 - 1, par5, par3, par4, par5);
@@ -121,7 +123,7 @@ public class WorldGenTestTree extends WorldGenerator implements IWorldGenerator
 									if (block == null || block.canBeReplacedByLeaves(par1World, j2, j1, l2))
 									{
 										/** Custom leaf block **/
-										this.setBlockAndMetadata(par1World, j2, j1, l2, Block.leaves.blockID, this.metaLeaves);
+										this.setBlockAndMetadata(par1World, j2, j1, l2, Blocks.starDustLeaf.blockID, this.metaLeaves);
 									}
 								}
 							}
@@ -134,7 +136,7 @@ public class WorldGenTestTree extends WorldGenerator implements IWorldGenerator
 						if (k1 == 0 || block == null || block.isLeaves(par1World, par3, par4 + j1, par5))
 						{
 							/** Custom Log block **/
-							this.setBlockAndMetadata(par1World, par3, par4 + j1, par5, Block.wood.blockID, this.metaWood);
+							this.setBlockAndMetadata(par1World, par3, par4 + j1, par5, Blocks.starDustLog.blockID, this.metaWood);
 						}
 					}
 					if (par2Random.nextInt(5) == 0 && l > 5)
@@ -146,7 +148,7 @@ public class WorldGenTestTree extends WorldGenerator implements IWorldGenerator
 								if (par2Random.nextInt(4 - j1) == 0)
 								{
 									i2 = par2Random.nextInt(3);
-									this.setBlockAndMetadata(par1World, par3 + Direction.offsetX[Direction.rotateOpposite[k1]], par4 + l - 5 + j1, par5 + Direction.offsetZ[Direction.rotateOpposite[k1]], Block.cocoaPlant.blockID, i2 << 2 | k1);
+									//this.setBlockAndMetadata(par1World, par3 + Direction.offsetX[Direction.rotateOpposite[k1]], par4 + l - 5 + j1, par5 + Direction.offsetZ[Direction.rotateOpposite[k1]], Block.cocoaPlant.blockID, i2 << 2 | k1);
 								}
 							}
 						}

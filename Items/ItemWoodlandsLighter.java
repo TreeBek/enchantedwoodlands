@@ -16,7 +16,7 @@ public ItemWoodlandsLighter(int par1)
 super(par1);
 this.maxStackSize = 1;
 setMaxDamage(64);
-setCreativeTab(Common.EnchantedWoodslandsTab);
+setCreativeTab(Common.EnchWoodRPGTab);
 }
 public boolean onItemUse(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, World par3World, int par4, int par5, int par6, int par7, float par8, float par9, float par10)
 {
@@ -53,7 +53,7 @@ if (i1 == 0)
 {
 par3World.playSoundEffect(par4 + 0.5D, par5 + 0.5D, par6 + 0.5D, "fire.ignite", 1.0F, itemRand.nextFloat() * 0.4F + 0.8F);
 /** replace with your fire block **/
-par3World.setBlock(par4, par5, par6, Blocks.woodlandsFire.blockID);
+par3World.setBlock(par4, par5, par6, Blocks.woodlandFire.blockID);
 }
 par1ItemStack.damageItem(1, par2EntityPlayer);
 return true;
