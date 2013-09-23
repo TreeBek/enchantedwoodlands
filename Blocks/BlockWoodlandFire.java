@@ -380,4 +380,9 @@ public Icon getBlockTextureFromSideAndMetadata(int par1, int par2)
 {
 return this.iconArray[0];
 }
+@SideOnly(Side.CLIENT)
+public Icon getFireIcon(int par1)
+{
+    return this.iconArray[par1];
+}
 }
