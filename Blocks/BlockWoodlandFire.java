@@ -369,7 +369,7 @@ return newChance > oldChance ? newChance : oldChance;
 @SideOnly(Side.CLIENT)
 public void registerIcons(IconRegister par1IconRegister)
 {
-this.iconArray = new Icon[] { par1IconRegister.registerIcon("EnchantedWoodlands:mythicalFire_0"), par1IconRegister.registerIcon("EnchantedWoodlands:mythicalFire_1") };
+this.iconArray = new Icon[] { par1IconRegister.registerIcon("EnchantedWoodlands:woodLandsFire_0"), par1IconRegister.registerIcon("EnchantedWoodlands:woodLandsFire_1") };
 }
 @SideOnly(Side.CLIENT)
 public Icon func_94438_c(int par1) {
