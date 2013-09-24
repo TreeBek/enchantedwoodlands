@@ -11,12 +11,11 @@ import java.util.List;
 import java.util.Random;
 
 import Mod.enchantedwoodlands.Blocks.Blocks;
-
+import Mod.enchantedwoodlands.Dimension.Plants.WorldGenTestTree;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-
 import net.minecraft.entity.monster.EntityCreeper;
 import net.minecraft.entity.monster.EntitySlime;
 import net.minecraft.entity.passive.EntitySheep;
@@ -36,6 +35,7 @@ public class Biome2 extends BiomeGenBase
 {
 private WorldGenerator UnDeadworldGeneratorBigTree;
 public final Material blockMaterial;
+private WorldGenTestTree WorldGenTestTrees;
 
 public Biome2(int par1)
 {
@@ -53,7 +53,7 @@ this.worldGeneratorSwamp = new WorldGenSwamp();
 this.theBiomeDecorator.treesPerChunk = 40;
 this.topBlock = ((byte)Blocks.woodlandGrass.blockID);
 this.fillerBlock = ((byte)Block.dirt.blockID);
-this.WorldGenTutorialTrees = new WorldGenTestTree(false);
+this.WorldGenTestTrees = new WorldGenTestTree(false);
 this.setBiomeName("Biome2");
 
 

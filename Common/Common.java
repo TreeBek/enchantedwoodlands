@@ -48,6 +48,7 @@ public static CreativeTabs EnchWoodRPGTab = new EnchWoodRPGTab(CreativeTabs.getN
 //ITEM AND BLOCK CONFIG
 //
 /////////////////////////////////////////
+
 //Block ID
 	public static int woodlandFireID;
 	public static int woodlandPortalID;
@@ -83,6 +84,7 @@ public static CreativeTabs EnchWoodRPGTab = new EnchWoodRPGTab(CreativeTabs.getN
      woodlandLighterID = config.get(Configuration.CATEGORY_ITEM, "Woodland Lighter", 7000).getInt();
      mythicalPortalPlacerID = config.get(Configuration.CATEGORY_ITEM, "Mythical PortalPlacer", 7001).getInt();
      teleWandID = config.get(Configuration.CATEGORY_ITEM, "Tele-Wand", 7002).getInt();
+     config.save();
  }
 
 

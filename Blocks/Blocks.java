@@ -3,6 +3,7 @@ package Mod.enchantedwoodlands.Blocks;
 import Mod.enchantedwoodlands.Common.Common;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
@@ -23,19 +24,20 @@ public class Blocks {
 	public static void Init(){
 	{
 		//Block Properties
-				woodlandFire = (BlockWoodlandFire) new BlockWoodlandFire(Common.woodlandFireID).setUnlocalizedName("woodlandFire");
+				woodlandFire = (BlockWoodlandFire) new BlockWoodlandFire(4000).setUnlocalizedName("woodlandFire");
 					GameRegistry.registerBlock(woodlandFire, Common.modid + woodlandFire.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(woodlandFire, "Woodland Fire");
 						
-				woodlandPortal = (BlockWoodlandPortal) new BlockWoodlandPortal(Common.woodlandPortalID).setUnlocalizedName("woodlandPortal");
+				woodlandPortal = (BlockWoodlandPortal) new BlockWoodlandPortal(4002).setUnlocalizedName("woodlandPortal");
 					GameRegistry.registerBlock(woodlandPortal, Common.modid + woodlandPortal.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(woodlandPortal, "Woodland Portal");
 					
-				woodlandGrass = new BlockWoodlandGrass(Common.woodlandGrassID).setHardness(0.7F).setUnlocalizedName("woodlandGrass");
+				woodlandGrass = new BlockWoodlandGrass(211).setHardness(0.7F).setUnlocalizedName("woodlandGrass");
 					GameRegistry.registerBlock(woodlandGrass, Common.modid + woodlandGrass.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(woodlandGrass, "Woodland Grass");
-					
-				mythicalStone = new BlockMythicalStone(Common.mythicalStoneID, Material.rock).setHardness(2.5F).setUnlocalizedName("mythicalStone");
+							MinecraftForge.setBlockHarvestLevel(woodlandGrass, "shovel", 0);
+							
+				mythicalStone = new BlockMythicalStone(206, Material.rock).setHardness(2.5F).setUnlocalizedName("mythicalStone");
 					GameRegistry.registerBlock(mythicalStone, Common.modid + mythicalStone.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(mythicalStone, "Mythical Stone");
 				
