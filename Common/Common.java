@@ -64,7 +64,7 @@ public static CreativeTabs EnchWoodRPGTab = new EnchWoodRPGTab(CreativeTabs.getN
 	public static int mythicalPortalPlacerID;
 	public static int teleWandID;
 
- @PreInit
+ 
  public void preInit(FMLPreInitializationEvent event){
 	 Configuration config = new Configuration(event.getSuggestedConfigurationFile());
      config.load();
