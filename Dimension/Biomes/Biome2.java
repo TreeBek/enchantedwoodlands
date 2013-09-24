@@ -53,11 +53,11 @@ this.worldGeneratorSwamp = new WorldGenSwamp();
 this.theBiomeDecorator.treesPerChunk = 40;
 this.topBlock = ((byte)Blocks.woodlandGrass.blockID);
 this.fillerBlock = ((byte)Block.dirt.blockID);
-//this.WorldGenTutorialTrees = new WorldGenTutorialTree(false);
+this.WorldGenTutorialTrees = new WorldGenTestTree(false);
 this.setBiomeName("Biome2");
 
 
 /** this changes the water colour, its set to red now but google the java colours **/
-this.waterColorMultiplier = 0x00FF33;}
+this.waterColorMultiplier = 0x00D1FF;}
 
 }
