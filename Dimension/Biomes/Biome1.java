@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Random;
 
 import Mod.enchantedwoodlands.Blocks.Blocks;
+import Mod.enchantedwoodlands.Dimension.Plants.WorldGenExepditeTree;
 import Mod.enchantedwoodlands.Dimension.Plants.WorldGenTestForestTree;
 import Mod.enchantedwoodlands.Dimension.Plants.WorldGenTestHugeTree;
 import Mod.enchantedwoodlands.Dimension.Plants.WorldGenTestTree;
@@ -34,7 +35,7 @@ public final Material blockMaterial;
 private WorldGenerator WorldGenTestTrees;
 private WorldGenerator WorldGenTestForestTrees;
 private WorldGenerator WorldGenTestHugeTrees;
-private Object worldGeneratorTutorialBigTree;
+private WorldGenerator WorldGenExepditeTree;
 public Biome1(int par1)
 {
 super(par1);
@@ -52,6 +53,7 @@ this.topBlock = ((byte)Blocks.starDustGrass.blockID);
 this.fillerBlock = ((byte)Block.dirt.blockID);
 this.WorldGenTestTrees = new WorldGenTestTree(false);
 this.WorldGenTestForestTrees = new WorldGenTestForestTree(false);
+this.WorldGenExepditeTree = new WorldGenExepditeTree(false);
 this.WorldGenTestHugeTrees = new WorldGenTestHugeTree(false, 8, Blocks.starDustLog.blockID, Blocks.starDustLeaf.blockID);
 this.setBiomeName("Biome1");
 

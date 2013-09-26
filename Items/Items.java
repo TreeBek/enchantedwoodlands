@@ -22,6 +22,7 @@ public class Items {
 	public static Item woodlandLighter;
 	public static Item mythicalPortalPlacer;
 	public static Item teleWand;
+	public static Item swiftnessFruit;
 	
 	public static void Init(){
 	{
@@ -35,6 +36,9 @@ public class Items {
         
 		teleWand = new ItemTeleWand(7002).setUnlocalizedName("teleWand");
 			LanguageRegistry.addName(teleWand, "Tele-Wand");
+			
+		swiftnessFruit = new ItemSwiftFruit(7003, 8, 0.1F, false).setUnlocalizedName("swiftnessFruit");
+			LanguageRegistry.addName(swiftnessFruit, "Swiftness Fruit");
 		
 	   }
 	}

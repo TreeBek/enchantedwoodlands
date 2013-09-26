@@ -157,6 +157,6 @@ public class BlockStarDustSapling extends BlockFlower
 	protected boolean canThisPlantGrowOnThisBlockID(int par1)
 	{
 		/** Change this to your custom grass **/
-		return par1 == Blocks.woodlandGrass.blockID || par1 == Block.dirt.blockID || par1 == Block.tilledField.blockID;
+		return par1 == Blocks.woodlandGrass.blockID || par1 == Block.dirt.blockID || par1 == Blocks.starDustGrass.blockID;
 	}
 }

@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Random;
 
 import Mod.enchantedwoodlands.Blocks.Blocks;
+import Mod.enchantedwoodlands.Dimension.Plants.WorldGenExepditeTree;
 import Mod.enchantedwoodlands.Dimension.Plants.WorldGenTestTree;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -33,9 +34,10 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class Biome2 extends BiomeGenBase
 {
+private WorldGenerator WorldGenTestTrees;
 private WorldGenerator UnDeadworldGeneratorBigTree;
 public final Material blockMaterial;
-private WorldGenTestTree WorldGenTestTrees;
+private WorldGenerator WorldGenExepditeTrees;
 
 public Biome2(int par1)
 {
@@ -50,14 +52,18 @@ this.spawnableMonsterList.add(new SpawnListEntry(EntityCreeper.class, 1, 500, 10
 this.spawnableCreatureList.clear();
 this.spawnableWaterCreatureList.clear();
 this.worldGeneratorSwamp = new WorldGenSwamp();
-this.theBiomeDecorator.treesPerChunk = 40;
+this.theBiomeDecorator.treesPerChunk = 1;
 this.topBlock = ((byte)Blocks.woodlandGrass.blockID);
 this.fillerBlock = ((byte)Block.dirt.blockID);
-this.WorldGenTestTrees = new WorldGenTestTree(false);
+this.WorldGenExepditeTrees = new WorldGenExepditeTree(false);
 this.setBiomeName("Biome2");
 
 
 /** this changes the water colour, its set to red now but google the java colours **/
 this.waterColorMultiplier = 0x00D1FF;}
 
+public WorldGenerator getRandomWorldGenForTrees(Random par1Random)
+{
+return (WorldGenerator)(par1Random.nextInt(5) == 0 ? this.worldGeneratorForest : (par1Random.nextInt(80) == 0 ? this.WorldGenTestTrees : this.worldGeneratorTrees));
+}
 }

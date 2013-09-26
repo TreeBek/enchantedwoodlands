@@ -20,6 +20,9 @@ public class Blocks {
 	public static final Block starDustLeaf = new BlockMythicalLeaf(209).setUnlocalizedName("starDustLeaf");
 	public static final Block starDustSapling = new BlockStarDustSapling(210, 0).setUnlocalizedName("starDustSapling");
 	public static Block woodlandGrass; 
+	public static Block exepditeLog;
+	public static final Block exepditeLeaf = new BlockMythicalLeaf(214).setUnlocalizedName("exepditeLeaf");
+	public static Block swiftnessFruit;
 	
 	public static void Init(){
 	{
@@ -40,13 +43,22 @@ public class Blocks {
 				mythicalStone = new BlockMythicalStone(206, Material.rock).setHardness(2.5F).setUnlocalizedName("mythicalStone");
 					GameRegistry.registerBlock(mythicalStone, Common.modid + mythicalStone.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(mythicalStone, "Mythical Stone");
-				
+						
+				exepditeLog = new BlockstarDustLog(213).setHardness(0.6F).setUnlocalizedName("exepditeLog");
+					GameRegistry.registerBlock(exepditeLog, Common.modid + exepditeLog.getUnlocalizedName().substring(5));
+						LanguageRegistry.addName(exepditeLog, "Exepdite Log");
+						
+				swiftnessFruit = new BlockSwiftnessFruit(215, Material.plants).setHardness(0.2F).setUnlocalizedName("swiftnessFruit");
+					GameRegistry.registerBlock(swiftnessFruit, Common.modid + swiftnessFruit.getUnlocalizedName().substring(5));
+						LanguageRegistry.addName(swiftnessFruit, "Swiftness Fruit Block");
+						
 		//Adding the Blocks
 				GameRegistry.registerBlock(starDustGrass, Common.modid + starDustGrass.getUnlocalizedName().substring(5));
 				GameRegistry.registerBlock(starDustLog, Common.modid + starDustLog.getUnlocalizedName().substring(5));
 				GameRegistry.registerBlock(starDustLeaf, Common.modid + starDustLeaf.getUnlocalizedName().substring(5));
 				GameRegistry.registerBlock(starDustSapling, Common.modid + starDustSapling.getUnlocalizedName().substring(5));
 				GameRegistry.registerBlock(starDustFlower, Common.modid + starDustFlower.getUnlocalizedName().substring(5));
+				GameRegistry.registerBlock(exepditeLeaf, Common.modid + exepditeLeaf.getUnlocalizedName().substring(5));
 				
 		//Block Name
 				LanguageRegistry.addName(starDustGrass, "StarDust Grass");
@@ -54,7 +66,7 @@ public class Blocks {
 				LanguageRegistry.addName(starDustLeaf, "StarDust Leaf");
 				LanguageRegistry.addName(starDustSapling, "StarDust Sapling");
 				LanguageRegistry.addName(starDustFlower, "StarDust Flower");
-		
+				LanguageRegistry.addName(exepditeLog, "Exepdite Log");
 		
 	
 		}

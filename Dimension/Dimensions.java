@@ -3,6 +3,7 @@ package Mod.enchantedwoodlands.Dimension;
 import Mod.enchantedwoodlands.Common.Common;
 import Mod.enchantedwoodlands.Dimension.Biomes.OreWorldGen;
 import Mod.enchantedwoodlands.Dimension.Generation.WorldProviderDim;
+import Mod.enchantedwoodlands.Dimension.Plants.WorldGenExepditeTree;
 import Mod.enchantedwoodlands.Dimension.Plants.WorldGenTestTree;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.world.biome.BiomeGenBase;
@@ -21,6 +22,7 @@ public class Dimensions {
 		DimensionManager.registerProviderType(Common.DimID, WorldProviderDim.class, true);
 		GameRegistry.registerWorldGenerator(new OreWorldGen());
 		GameRegistry.registerWorldGenerator(new WorldGenTestTree(false));
+		GameRegistry.registerWorldGenerator(new WorldGenExepditeTree(false));
 		//DimensionManager.registerProviderType(DimID, WorldProviderBiomes.class, true);
 		DimensionManager.registerDimension(Common.DimID, Common.DimID);
 

@@ -27,7 +27,6 @@ public BlockstarDustLog(int par1)
 super(par1, Material.wood);
 this.setCreativeTab(Common.EnchWoodRPGTab);
 this.setStepSound(soundWoodFootstep);
-this.setHardness(2.0F);
 }
 
 /**
@@ -80,9 +79,9 @@ return par1 == 1 ? this.iconLogTop : (par1 == 0 ? this.iconLogBottom : this.bloc
 public void registerIcons(IconRegister par1IconRegister)
 {
 /** change the "Tutorial:LogSide,LogTop to your texture names **/
-this.blockIcon = par1IconRegister.registerIcon("mythicalrpg:slimeLog_side");
-this.iconLogTop = par1IconRegister.registerIcon("mythicalrpg:slimeLog_top");
-this.iconLogBottom = par1IconRegister.registerIcon("mythicalrpg:slimeLog_top");
+this.blockIcon = par1IconRegister.registerIcon(Common.modid + ":" + this.getUnlocalizedName().substring(5) + "_side");
+this.iconLogTop = par1IconRegister.registerIcon(Common.modid + ":" + this.getUnlocalizedName().substring(5) + "_top");
+this.iconLogBottom = par1IconRegister.registerIcon(Common.modid + ":" + this.getUnlocalizedName().substring(5) + "_top");
 }
 
 @Override

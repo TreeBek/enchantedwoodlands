@@ -110,10 +110,10 @@ return this.blockIcon;
 public void registerIcons(IconRegister par1IconRegister)
 {
 
-this.blockIcon = par1IconRegister.registerIcon("EnchantedWoodlands:woodlandsGrass_side");
-this.iconGrassTop = par1IconRegister.registerIcon("EnchantedWoodlands:woodlandsGrass_top");
+this.blockIcon = par1IconRegister.registerIcon(Common.modid + ":" + this.getUnlocalizedName().substring(5) + "_side");
+this.iconGrassTop = par1IconRegister.registerIcon(Common.modid + ":" + this.getUnlocalizedName().substring(5) + "_top");
 this.iconGrassBottom = par1IconRegister.registerIcon("EnchantedWoodlands:dirt_bottom");
-this.iconGrassSideOverlay = par1IconRegister.registerIcon("EnchantedWoodlands:woodlandsGrass_side_overlay");
+this.iconGrassSideOverlay = par1IconRegister.registerIcon(Common.modid + ":" + this.getUnlocalizedName().substring(5) + "_side_overlay");
 
 this.blockIcon = par1IconRegister.registerIcon("EnchantedWoodlands:woodlandGrass_side");
 this.iconGrassTop = par1IconRegister.registerIcon("EnchantedWoodlands:woodlandGrass_top");

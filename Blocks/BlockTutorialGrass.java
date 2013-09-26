@@ -113,7 +113,7 @@ public void registerIcons(IconRegister par1IconRegister)
 //Trying Something making it easier to make dirt blocks
 this.blockIcon = par1IconRegister.registerIcon(Common.modid + ":" + this.getUnlocalizedName().substring(5) + "_side");
 this.iconGrassTop = par1IconRegister.registerIcon(Common.modid + ":" + this.getUnlocalizedName().substring(5) + "_top");
-this.iconGrassBottom = par1IconRegister.registerIcon(Common.modid + ":" + this.getUnlocalizedName().substring(5) + "_bottom");
+this.iconGrassBottom = par1IconRegister.registerIcon("EnchantedWoodlands:dirt_bottom");
 this.iconGrassSideOverlay = par1IconRegister.registerIcon(Common.modid + ":" + this.getUnlocalizedName().substring(5) + "_side_overlay");
 }
 

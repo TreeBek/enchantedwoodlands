@@ -59,6 +59,8 @@ public static CreativeTabs EnchWoodRPGTab = new EnchWoodRPGTab(CreativeTabs.getN
 	public static int starDustLeafID;
 	public static int starDustSaplingID;
 	public static int woodlandGrassID;
+	public static int exepditeLogID;
+	public static int exepditeLeafID;
 	
 //Item ID
 	public static int woodlandLighterID;
@@ -76,9 +78,11 @@ public static CreativeTabs EnchWoodRPGTab = new EnchWoodRPGTab(CreativeTabs.getN
      mythicalStoneID = config.getTerrainBlock("Enchanted", "Mythical Stone", 206,"Enchanted Woodlands").getInt();
      starDustFlowerID = config.get(Configuration.CATEGORY_BLOCK, "StarDust Flower", 207).getInt();
      starDustLogID = config.get(Configuration.CATEGORY_BLOCK, "StarDust Log", 208).getInt();
-     starDustLeafID = config.get(Configuration.CATEGORY_BLOCK, "StarDust Leaf", 209).getInt();
+     starDustLeafID = config.get(Configuration.CATEGORY_BLOCK, "StarDust Leaves", 209).getInt();
      starDustSaplingID = config.get(Configuration.CATEGORY_BLOCK, "StarDust Sapling", 210).getInt();
      woodlandGrassID = config.getTerrainBlock("Enchanted", "Woodline Grass", 211,"Enchanted Woodlands").getInt();
+     exepditeLogID = config.get(Configuration.CATEGORY_BLOCK, "Exepdite Log", 212).getInt();
+     exepditeLeafID = config.get(Configuration.CATEGORY_BLOCK, "Exepdite Leaves", 213).getInt();
     
      //Items
      woodlandLighterID = config.get(Configuration.CATEGORY_ITEM, "Woodland Lighter", 7000).getInt();
