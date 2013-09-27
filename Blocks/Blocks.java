@@ -23,6 +23,7 @@ public class Blocks {
 	public static Block exepditeLog;
 	public static final Block exepditeLeaf = new BlockMythicalLeaf(214).setUnlocalizedName("exepditeLeaf");
 	public static Block swiftnessFruit;
+	public static Block woodlandBench;
 	
 	public static void Init(){
 	{
@@ -51,6 +52,10 @@ public class Blocks {
 				swiftnessFruit = new BlockSwiftnessFruit(215, Material.plants).setHardness(0.2F).setUnlocalizedName("swiftnessFruit");
 					GameRegistry.registerBlock(swiftnessFruit, Common.modid + swiftnessFruit.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(swiftnessFruit, "Swiftness Fruit Block");
+						
+				woodlandBench = new BlockWoodlandBench(216).setUnlocalizedName("woodlandBench");
+					GameRegistry.registerBlock(woodlandBench, Common.modid + woodlandBench.getUnlocalizedName().substring(5));
+						LanguageRegistry.addName(woodlandBench, "Woodland Bench");
 						
 		//Adding the Blocks
 				GameRegistry.registerBlock(starDustGrass, Common.modid + starDustGrass.getUnlocalizedName().substring(5));
