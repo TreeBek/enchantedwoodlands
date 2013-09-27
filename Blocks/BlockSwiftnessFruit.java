@@ -61,10 +61,6 @@ public class BlockSwiftnessFruit extends Block
     {
         return Items.swiftnessFruit.itemID;
     }
-    public int quantityDropped(Random par1Random)
-    {
-        return 1 + par1Random.nextInt(2);
-    }
 	
 	@Override
 	 protected boolean canSilkHarvest()

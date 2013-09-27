@@ -5,6 +5,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
+import Mod.enchantedwoodlands.Blocks.Blocks;
+import Mod.enchantedwoodlands.Crafting.CraftingWoodland;
 import Mod.enchantedwoodlands.Items.Items;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
@@ -27,19 +29,25 @@ public static final WoodlandCraftingManager getInstance()
 
 private WoodlandCraftingManager()
 {
-recipes = new ArrayList();
+	recipes = new ArrayList();
 	this.func_92051_a(new ItemStack(Items.teleWand), new Object[] {
 		" R ", 
 		" R ", 
 		"RRR", 
 		" R ", 
-		" R ", 'O', Block.dirt, 'R', Item.redstone});
-
+		" R ", 'R', Item.redstone});
+	
+	this.func_92051_a(new ItemStack(Blocks.woodlandBench), new Object[] {"##", "##", '#', Blocks.woodlandPlank});
+		
+	this.addBuilderShapelessRecipe(new ItemStack(Blocks.woodlandPlank, 4), new Object[] {Blocks.starDustLog});
+		
+		
          //This is where your recipes will go
 
 Collections.sort(this.recipes, new WoodlandRecipeSorter(this));
          System.out.println(this.recipes.size() + " recipes");
 }
+
 
 public WoodlandShapedRecipes func_92051_a(ItemStack par1ItemStack, Object ... par2ArrayOfObj)
 {
