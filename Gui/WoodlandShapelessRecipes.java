@@ -1,4 +1,4 @@
-package Mod.enchantedwoodlands.Common.Gui;
+package Mod.enchantedwoodlands.Gui;
 
 import java.util.ArrayList;
 import java.util.Iterator;

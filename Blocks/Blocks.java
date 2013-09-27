@@ -16,14 +16,15 @@ public class Blocks {
 	public static final Block starDustGrass = new BlockTutorialGrass(225).setHardness(0.6F).setUnlocalizedName("starDustGrass");
 	public static Block mythicalStone;
 	public static final Block starDustFlower = new BlockStarDustFlower(207).setUnlocalizedName("starDustFlower");
-	public static final Block starDustLog = new BlockstarDustLog(208).setUnlocalizedName("starDustLog");
-	public static final Block starDustLeaf = new BlockMythicalLeaf(209).setUnlocalizedName("starDustLeaf");
+	public static final Block starDustLog = new BlockstarDustLog(208).setHardness(2.3F).setUnlocalizedName("woodlandLog");
+	public static final Block starDustLeaf = new BlockMythicalLeaf(209).setUnlocalizedName("woodlandLeaf");
 	public static final Block starDustSapling = new BlockStarDustSapling(210, 0).setUnlocalizedName("starDustSapling");
 	public static Block woodlandGrass; 
 	public static Block exepditeLog;
 	public static final Block exepditeLeaf = new BlockMythicalLeaf(214).setUnlocalizedName("exepditeLeaf");
 	public static Block swiftnessFruit;
 	public static Block woodlandBench;
+	public static Block woodlandPlank;
 	
 	public static void Init(){
 	{
@@ -41,11 +42,11 @@ public class Blocks {
 						LanguageRegistry.addName(woodlandGrass, "Woodland Grass");
 							MinecraftForge.setBlockHarvestLevel(woodlandGrass, "shovel", 0);
 							
-				mythicalStone = new BlockMythicalStone(206, Material.rock).setHardness(2.5F).setUnlocalizedName("mythicalStone");
+				mythicalStone = new BlockBaseBlock(206, Material.rock).setHardness(2.5F).setUnlocalizedName("mythicalStone");
 					GameRegistry.registerBlock(mythicalStone, Common.modid + mythicalStone.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(mythicalStone, "Mythical Stone");
 						
-				exepditeLog = new BlockstarDustLog(213).setHardness(0.6F).setUnlocalizedName("exepditeLog");
+				exepditeLog = new BlockstarDustLog(213).setHardness(2.0F).setUnlocalizedName("exepditeLog");
 					GameRegistry.registerBlock(exepditeLog, Common.modid + exepditeLog.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(exepditeLog, "Exepdite Log");
 						
@@ -56,6 +57,10 @@ public class Blocks {
 				woodlandBench = new BlockWoodlandBench(216).setUnlocalizedName("woodlandBench");
 					GameRegistry.registerBlock(woodlandBench, Common.modid + woodlandBench.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(woodlandBench, "Woodland Bench");
+						
+				woodlandPlank = new BlockBaseBlock(217, Material.wood).setHardness(2.0F).setUnlocalizedName("bench_bottom");
+					GameRegistry.registerBlock(woodlandPlank, Common.modid + woodlandPlank.getUnlocalizedName().substring(5));
+						LanguageRegistry.addName(woodlandPlank, "Woodland Plank");
 						
 		//Adding the Blocks
 				GameRegistry.registerBlock(starDustGrass, Common.modid + starDustGrass.getUnlocalizedName().substring(5));

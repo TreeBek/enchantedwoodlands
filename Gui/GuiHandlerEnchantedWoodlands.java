@@ -1,4 +1,4 @@
-package Mod.enchantedwoodlands.Common.Gui;
+package Mod.enchantedwoodlands.Gui;
 
 import Mod.enchantedwoodlands.Blocks.Blocks;
 import net.minecraft.entity.player.EntityPlayer;

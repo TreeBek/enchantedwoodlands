@@ -2,19 +2,19 @@ package Mod.enchantedwoodlands.Common;
 
 
 import Mod.enchantedwoodlands.Blocks.BlockMythicalLeaf;
-import Mod.enchantedwoodlands.Blocks.BlockMythicalStone;
 import Mod.enchantedwoodlands.Blocks.BlockStarDustFlower;
 import Mod.enchantedwoodlands.Blocks.BlockStarDustSapling;
 import Mod.enchantedwoodlands.Blocks.BlockTutorialGrass;
 import Mod.enchantedwoodlands.Blocks.Blocks;
 import Mod.enchantedwoodlands.Blocks.BlockstarDustLog;
-import Mod.enchantedwoodlands.Common.Gui.GuiHandlerEnchantedWoodlands;
-import Mod.enchantedwoodlands.Common.Proxy.CommonProxy;
+import Mod.enchantedwoodlands.Crafting.Crafting;
 import Mod.enchantedwoodlands.Dimension.Dimensions;
 import Mod.enchantedwoodlands.Dimension.MythicalEventClass;
 import Mod.enchantedwoodlands.Dimension.Biomes.OreWorldGen;
+import Mod.enchantedwoodlands.Gui.GuiHandlerEnchantedWoodlands;
 import Mod.enchantedwoodlands.Items.ItemPortalPlacer;
 import Mod.enchantedwoodlands.Items.Items;
+import Mod.enchantedwoodlands.Proxy.CommonProxy;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBreakable;
 import net.minecraft.block.BlockFire;
@@ -41,7 +41,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class Common
 {
-	@SidedProxy(clientSide = "Mod.enchantedwoodlands.Common.Proxy.ClientProxy", serverSide = "Mod.enchantedwoodlands.Common.CommonProxy")
+	@SidedProxy(clientSide = "Mod.enchantedwoodlands.Proxy.ClientProxy", serverSide = "Mod.enchantedwoodlands.Proxy.CommonProxy")
 	 public static CommonProxy proxy;
 	@Instance("EnchantedWoodlands")
 	public static Common instance;
@@ -109,6 +109,7 @@ public static void Init(FMLInitializationEvent event)
 	Blocks.Init();
 	Dimensions.Init();
 	Items.Init();
+	Crafting.Init();
 	NetworkRegistry.instance().registerGuiHandler(guiHandlerEnchantedWoodlands, guiHandlerEnchantedWoodlands);
 	proxy.registerRenderThings();
 	

@@ -1,4 +1,4 @@
-package Mod.enchantedwoodlands.Common.Proxy;
+package Mod.enchantedwoodlands.Proxy;
 
 public class ClientProxy extends CommonProxy{
 

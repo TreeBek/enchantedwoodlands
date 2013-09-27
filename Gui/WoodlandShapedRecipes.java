@@ -1,4 +1,4 @@
-package Mod.enchantedwoodlands.Common.Gui;
+package Mod.enchantedwoodlands.Gui;
 
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.ItemStack;

@@ -7,9 +7,9 @@ import net.minecraft.client.renderer.texture.IconRegister;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockMythicalStone extends Block
+public class BlockBaseBlock extends Block
 {
-    public BlockMythicalStone(int par1, Material par2Material)
+    public BlockBaseBlock(int par1, Material par2Material)
     {
         super(par1, par2Material);
         this.setCreativeTab(Common.EnchWoodRPGTab);

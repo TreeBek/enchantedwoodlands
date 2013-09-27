@@ -1,4 +1,4 @@
-package Mod.enchantedwoodlands.Common.Gui;
+package Mod.enchantedwoodlands.Gui;
 
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
