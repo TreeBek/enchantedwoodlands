@@ -502,16 +502,8 @@ public class ChunkProviderTutorial implements IChunkProvider {
 			}
 		}
 
-		boolean doGen = TerrainGen.populate(par1IChunkProvider, worldObj, rand, par2, par3, flag, DUNGEON);
-		for (k1 = 0; doGen && k1 < 8; ++k1) {
-			l1 = k + this.rand.nextInt(16) + 8;
-			i2 = this.rand.nextInt(128);
-			int j2 = l + this.rand.nextInt(16) + 8;
-
-			if ((new WorldGenDungeons()).generate(this.worldObj, this.rand, l1, i2, j2)) {
-				;
-			}
-		}
+		
+		
 
 		//BASIC TREES
         for (int c = 60; c > 0; c--)

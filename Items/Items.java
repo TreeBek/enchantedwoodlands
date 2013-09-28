@@ -23,22 +23,26 @@ public class Items {
 	public static Item mythicalPortalPlacer;
 	public static Item teleWand;
 	public static Item swiftnessFruit;
+	public static Item tier1Key;
 	
 	public static void Init(){
 	{
 	
 		//Item Properties
-		woodlandLighter = new ItemWoodlandsLighter(7000).setUnlocalizedName("woodlandLighter");
+		woodlandLighter = new ItemWoodlandsLighter(Common.woodlandLighterID).setUnlocalizedName("woodlandLighter");
 			LanguageRegistry.addName(woodlandLighter, "Woodland Lighter");
 		
-		mythicalPortalPlacer = new ItemPortalPlacer(7001).setUnlocalizedName("mythicalPortalPlacer");
+		mythicalPortalPlacer = new ItemPortalPlacer(Common.mythicalPortalPlacerID).setUnlocalizedName("mythicalPortalPlacer");
 		 	LanguageRegistry.addName(mythicalPortalPlacer, "Mythical Portal Placer");
         
-		teleWand = new ItemTeleWand(7002).setUnlocalizedName("teleWand");
+		teleWand = new ItemTeleWand(Common.teleWandID).setUnlocalizedName("teleWand");
 			LanguageRegistry.addName(teleWand, "Tele-Wand");
 			
-		swiftnessFruit = new ItemSwiftFruit(7003, 3, 0.1F, false).setUnlocalizedName("swiftnessFruit");
+		swiftnessFruit = new ItemSwiftFruit(Common.swiftnessFruitID, 3, 0.1F, false).setUnlocalizedName("swiftnessFruit");
 			LanguageRegistry.addName(swiftnessFruit, "Swiftness Fruit");
+			
+		tier1Key = new ItemKeyOne(Common.tier1KeyID).setUnlocalizedName("tier1Key");
+			LanguageRegistry.addName(tier1Key, "Tier-1 Key");
 		
 	   }
 	}

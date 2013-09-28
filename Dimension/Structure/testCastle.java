@@ -2155,7 +2155,7 @@ public class testCastle extends WorldGenerator
 		world.setBlock(i + 13, j + 5, k + 14, 0);
 		world.setBlock(i + 13, j + 5, k + 15, 0);
 		world.setBlock(i + 13, j + 5, k + 16, 0);
-		world.setBlock(i + 13, j + 5, k + 17, Blocks.redCrystal.blockID);
+		world.setBlock(i + 13, j + 5, k + 17, Blocks.tier1KeyBlock.blockID);
 		world.setBlock(i + 13, j + 5, k + 18, Block.cobblestone.blockID);
 		world.setBlock(i + 13, j + 5, k + 19, Block.cobblestone.blockID);
 		world.setBlock(i + 13, j + 5, k + 20, Block.cobblestone.blockID);
