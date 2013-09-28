@@ -19,4 +19,5 @@ BUGS:
 *Sapling sounds like wood <br>
 *Tele-Wand is Broke <br>
 *Leaves don't decay <br>
-*Swiftness Fruit generation is a bit off
+*Swiftness Fruit generation is a bit off <br>
+*Config hates me
