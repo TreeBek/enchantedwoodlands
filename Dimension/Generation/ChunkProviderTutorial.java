@@ -483,7 +483,7 @@ public class ChunkProviderTutorial implements IChunkProvider {
 
 		}
 		testCastle tree = new testCastle();
-		if (rand.nextFloat() < 0.01F){
+		if (rand.nextFloat() < 0.02F){
 		  for(int x = 0;x<1;x++)
 		  {
 			k1 = k + rand.nextInt(16);

@@ -17,12 +17,15 @@ import Mod.enchantedwoodlands.Gui.GuiHandlerEnchantedWoodlands;
 import Mod.enchantedwoodlands.Items.ItemPortalPlacer;
 import Mod.enchantedwoodlands.Items.Items;
 import Mod.enchantedwoodlands.Proxy.CommonProxy;
+import Mod.enchantedwoodlands.Render.TileEntityRedCrystal;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBreakable;
 import net.minecraft.block.BlockFire;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.DimensionManager;
@@ -114,8 +117,10 @@ public static void Init(FMLInitializationEvent event)
 	Items.Init();
 	Crafting.Init();
 	NetworkRegistry.instance().registerGuiHandler(guiHandlerEnchantedWoodlands, guiHandlerEnchantedWoodlands);
+	GameRegistry.registerBlock(Blocks.redCrystal);
 	proxy.registerRenderThings();
 	Structure.Init();
+	TileEntity.addMapping(TileEntityRedCrystal.class, "Red Crystal");
 	
 }
 

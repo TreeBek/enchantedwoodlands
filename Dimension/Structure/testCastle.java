@@ -1600,7 +1600,7 @@ public class testCastle extends WorldGenerator
 		world.setBlock(i + 10, j + 1, k + 9, 0);
 		world.setBlock(i + 10, j + 1, k + 10, 0);
 		world.setBlock(i + 10, j + 1, k + 11, 0);
-		world.setBlock(i + 10, j + 1, k + 12, Block.stairsStoneBrick.blockID, 2, 0);
+		world.setBlock(i + 10, j + 1, k + 12, Block.stairsStoneBrick.blockID, 2, 1);
 		world.setBlock(i + 10, j + 1, k + 13, Block.stoneBrick.blockID);
 		world.setBlock(i + 10, j + 1, k + 14, 0);
 		world.setBlock(i + 10, j + 1, k + 15, 0);
@@ -1626,7 +1626,7 @@ public class testCastle extends WorldGenerator
 		world.setBlock(i + 10, j + 2, k + 10, 0);
 		world.setBlock(i + 10, j + 2, k + 11, 0);
 		world.setBlock(i + 10, j + 2, k + 12, 0);
-		world.setBlock(i + 10, j + 2, k + 13, Block.stairsStoneBrick.blockID, 2, 0);
+		world.setBlock(i + 10, j + 2, k + 13, Block.stairsStoneBrick.blockID, 2, 1);
 		world.setBlock(i + 10, j + 2, k + 14, Block.stoneBrick.blockID);
 		world.setBlock(i + 10, j + 2, k + 15, 0);
 		world.setBlock(i + 10, j + 2, k + 16, 0);
@@ -1652,7 +1652,7 @@ public class testCastle extends WorldGenerator
 		world.setBlock(i + 10, j + 3, k + 11, 0);
 		world.setBlock(i + 10, j + 3, k + 12, 0);
 		world.setBlock(i + 10, j + 3, k + 13, 0);
-		world.setBlock(i + 10, j + 3, k + 14, Block.stairsStoneBrick.blockID, 2, 0);
+		world.setBlock(i + 10, j + 3, k + 14, Block.stairsStoneBrick.blockID, 2, 1);
 		world.setBlock(i + 10, j + 3, k + 15, Block.stoneBrick.blockID);
 		world.setBlock(i + 10, j + 3, k + 16, Block.stoneBrick.blockID);
 		world.setBlock(i + 10, j + 3, k + 17, Block.stoneBrick.blockID);
@@ -1750,7 +1750,7 @@ public class testCastle extends WorldGenerator
 		world.setBlock(i + 11, j + 1, k + 9, 0);
 		world.setBlock(i + 11, j + 1, k + 10, 0);
 		world.setBlock(i + 11, j + 1, k + 11, 0);
-		world.setBlock(i + 10, j + 2, k + 13, Block.stairsStoneBrick.blockID, 2, 0);
+		world.setBlock(i + 10, j + 2, k + 13, Block.stairsStoneBrick.blockID, 2, 1);
 		world.setBlock(i + 11, j + 1, k + 13, Block.stoneBrick.blockID);
 		world.setBlock(i + 11, j + 1, k + 14, 0);
 		world.setBlock(i + 11, j + 1, k + 15, 0);
@@ -1776,7 +1776,7 @@ public class testCastle extends WorldGenerator
 		world.setBlock(i + 11, j + 2, k + 10, 0);
 		world.setBlock(i + 11, j + 2, k + 11, 0);
 		world.setBlock(i + 11, j + 2, k + 12, 0);
-		world.setBlock(i + 11, j + 2, k + 13, Block.stairsStoneBrick.blockID, 2, 0);
+		world.setBlock(i + 11, j + 2, k + 13, Block.stairsStoneBrick.blockID, 2, 1);
 		world.setBlock(i + 11, j + 2, k + 14, Block.stoneBrick.blockID);
 		world.setBlock(i + 11, j + 2, k + 15, 0);
 		world.setBlock(i + 11, j + 2, k + 16, 0);
@@ -1802,7 +1802,7 @@ public class testCastle extends WorldGenerator
 		world.setBlock(i + 11, j + 3, k + 11, 0);
 		world.setBlock(i + 11, j + 3, k + 12, 0);
 		world.setBlock(i + 11, j + 3, k + 13, 0);
-		world.setBlock(i + 10, j + 2, k + 13, Block.stairsStoneBrick.blockID, 2, 0);
+		world.setBlock(i + 10, j + 2, k + 13, Block.stairsStoneBrick.blockID, 2, 1);
 		world.setBlock(i + 11, j + 3, k + 15, Block.stoneBrick.blockID);
 		world.setBlock(i + 11, j + 3, k + 16, Block.stoneBrick.blockID);
 		world.setBlock(i + 11, j + 3, k + 17, Block.stoneBrick.blockID);
@@ -2155,7 +2155,7 @@ public class testCastle extends WorldGenerator
 		world.setBlock(i + 13, j + 5, k + 14, 0);
 		world.setBlock(i + 13, j + 5, k + 15, 0);
 		world.setBlock(i + 13, j + 5, k + 16, 0);
-		world.setBlock(i + 13, j + 5, k + 17, Block.blockDiamond.blockID);
+		world.setBlock(i + 13, j + 5, k + 17, Blocks.redCrystal.blockID);
 		world.setBlock(i + 13, j + 5, k + 18, Block.cobblestone.blockID);
 		world.setBlock(i + 13, j + 5, k + 19, Block.cobblestone.blockID);
 		world.setBlock(i + 13, j + 5, k + 20, Block.cobblestone.blockID);
@@ -2305,7 +2305,7 @@ public class testCastle extends WorldGenerator
 		world.setBlock(i + 14, j + 5, k + 14, 0);
 		world.setBlock(i + 14, j + 5, k + 15, 0);
 		world.setBlock(i + 14, j + 5, k + 16, 0);
-		world.setBlock(i + 14, j + 5, k + 17, Block.blockDiamond.blockID);
+		world.setBlock(i + 14, j + 5, k + 17, Blocks.redCrystal.blockID);
 		world.setBlock(i + 14, j + 5, k + 18, Block.cobblestone.blockID);
 		world.setBlock(i + 14, j + 5, k + 19, Block.cobblestone.blockID);
 		world.setBlock(i + 14, j + 5, k + 20, Block.cobblestone.blockID);
@@ -2500,7 +2500,7 @@ public class testCastle extends WorldGenerator
 		world.setBlock(i + 16, j + 1, k + 9, 0);
 		world.setBlock(i + 16, j + 1, k + 10, 0);
 		world.setBlock(i + 16, j + 1, k + 11, 0);
-		world.setBlock(i + 10, j + 2, k + 13, Block.stairsStoneBrick.blockID, 2, 0);
+		world.setBlock(i + 10, j + 2, k + 13, Block.stairsStoneBrick.blockID, 2, 1);
 		world.setBlock(i + 16, j + 1, k + 13, Block.stoneBrick.blockID);
 		world.setBlock(i + 16, j + 1, k + 14, 0);
 		world.setBlock(i + 16, j + 1, k + 15, 0);
@@ -2526,7 +2526,7 @@ public class testCastle extends WorldGenerator
 		world.setBlock(i + 16, j + 2, k + 10, 0);
 		world.setBlock(i + 16, j + 2, k + 11, 0);
 		world.setBlock(i + 16, j + 2, k + 12, 0);
-		world.setBlock(i + 10, j + 2, k + 13, Block.stairsStoneBrick.blockID, 2, 0);
+		world.setBlock(i + 10, j + 2, k + 13, Block.stairsStoneBrick.blockID, 2, 1);
 		world.setBlock(i + 16, j + 2, k + 14, Block.stoneBrick.blockID);
 		world.setBlock(i + 16, j + 2, k + 15, 0);
 		world.setBlock(i + 16, j + 2, k + 16, 0);
@@ -2552,7 +2552,7 @@ public class testCastle extends WorldGenerator
 		world.setBlock(i + 16, j + 3, k + 11, 0);
 		world.setBlock(i + 16, j + 3, k + 12, 0);
 		world.setBlock(i + 16, j + 3, k + 13, 0);
-		world.setBlock(i + 10, j + 2, k + 13, Block.stairsStoneBrick.blockID, 2, 0);
+		world.setBlock(i + 10, j + 2, k + 13, Block.stairsStoneBrick.blockID, 2, 1);
 		world.setBlock(i + 16, j + 3, k + 15, Block.stoneBrick.blockID);
 		world.setBlock(i + 16, j + 3, k + 16, Block.stoneBrick.blockID);
 		world.setBlock(i + 16, j + 3, k + 17, Block.stoneBrick.blockID);
@@ -2650,7 +2650,7 @@ public class testCastle extends WorldGenerator
 		world.setBlock(i + 17, j + 1, k + 9, 0);
 		world.setBlock(i + 17, j + 1, k + 10, 0);
 		world.setBlock(i + 17, j + 1, k + 11, 0);
-		world.setBlock(i + 10, j + 2, k + 13, Block.stairsStoneBrick.blockID, 2, 0);
+		world.setBlock(i + 10, j + 2, k + 13, Block.stairsStoneBrick.blockID, 2, 1);
 		world.setBlock(i + 17, j + 1, k + 13, Block.stoneBrick.blockID);
 		world.setBlock(i + 17, j + 1, k + 14, 0);
 		world.setBlock(i + 17, j + 1, k + 15, 0);
@@ -2676,7 +2676,7 @@ public class testCastle extends WorldGenerator
 		world.setBlock(i + 17, j + 2, k + 10, 0);
 		world.setBlock(i + 17, j + 2, k + 11, 0);
 		world.setBlock(i + 17, j + 2, k + 12, 0);
-		world.setBlock(i + 10, j + 2, k + 13, Block.stairsStoneBrick.blockID, 2, 0);
+		world.setBlock(i + 10, j + 2, k + 13, Block.stairsStoneBrick.blockID, 2, 1);
 		world.setBlock(i + 17, j + 2, k + 14, Block.stoneBrick.blockID);
 		world.setBlock(i + 17, j + 2, k + 15, 0);
 		world.setBlock(i + 17, j + 2, k + 16, 0);
@@ -2702,7 +2702,7 @@ public class testCastle extends WorldGenerator
 		world.setBlock(i + 17, j + 3, k + 11, 0);
 		world.setBlock(i + 17, j + 3, k + 12, 0);
 		world.setBlock(i + 17, j + 3, k + 13, 0);
-		world.setBlock(i + 10, j + 2, k + 13, Block.stairsStoneBrick.blockID, 2, 0);
+		world.setBlock(i + 10, j + 2, k + 13, Block.stairsStoneBrick.blockID, 2, 1);
 		world.setBlock(i + 17, j + 3, k + 15, Block.stoneBrick.blockID);
 		world.setBlock(i + 17, j + 3, k + 16, Block.stoneBrick.blockID);
 		world.setBlock(i + 17, j + 3, k + 17, Block.stoneBrick.blockID);

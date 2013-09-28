@@ -63,7 +63,7 @@ public class Blocks {
 					GameRegistry.registerBlock(woodlandPlank, Common.modid + woodlandPlank.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(woodlandPlank, "Woodland Plank");
 						
-				redCrystal = new BlockRedCrystal(218, 1, Material.glass).setStepSound(Block.soundGlassFootstep).setHardness(5.0F).setUnlocalizedName("redCrystalParticles");
+				redCrystal = new BlockRedCrystal(4003, 1, Material.glass).setStepSound(Block.soundGlassFootstep).setHardness(5.0F).setUnlocalizedName("redCrystalParticles");
 					GameRegistry.registerBlock(redCrystal, Common.modid + redCrystal.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(redCrystal, "Red Crystal");
 						
