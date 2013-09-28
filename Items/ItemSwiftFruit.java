@@ -3,7 +3,6 @@ package Mod.enchantedwoodlands.Items;
 import java.util.List;
 
 import Mod.enchantedwoodlands.Common.Common;
-import vanillaplus.VanillaPlus;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IconRegister;
