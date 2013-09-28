@@ -3,9 +3,11 @@ package Mod.enchantedwoodlands.Items;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import Mod.enchantedwoodlands.Common.Common;
+import Mod.enchantedwoodlands.Dimension.Generation.MythicalTeleporter;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
@@ -17,19 +19,24 @@ public class ItemTeleWand extends Item{
 	public ItemTeleWand(int par1) {
 		super(par1);
 		this.setCreativeTab(Common.EnchWoodRPGTab);
+		this.setMaxStackSize(1);
+		this.setMaxDamage(3);
 	}
 
 	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
     {
-			int PlayerDimension = par3EntityPlayer.dimension;
-  
-				if(PlayerDimension == 2){
-   
-					par3EntityPlayer.travelToDimension(0);
-					return par1ItemStack;
-   
-				}else return par1ItemStack;
-  
+		if ((par3EntityPlayer.ridingEntity == null) && (par3EntityPlayer.riddenByEntity == null) && ((par3EntityPlayer instanceof EntityPlayerMP)))
+        {
+			EntityPlayerMP thePlayer = (EntityPlayerMP)par3EntityPlayer;
+        	
+			if (thePlayer.dimension == Common.DimID)
+        	{
+				par1ItemStack.damageItem(1, par3EntityPlayer);
+                thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, Common.DimID, new MythicalTeleporter(thePlayer.mcServer.worldServerForDimension(Common.DimID)));
+        	}
+        	
+        }
+		return par1ItemStack;
     }
 	
    
