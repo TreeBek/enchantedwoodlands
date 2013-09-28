@@ -25,6 +25,7 @@ public class Blocks {
 	public static Block swiftnessFruit;
 	public static Block woodlandBench;
 	public static Block woodlandPlank;
+	public static Block redCrystal;
 	
 	public static void Init(){
 	{
@@ -61,6 +62,10 @@ public class Blocks {
 				woodlandPlank = new BlockBaseBlock(217, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.0F).setUnlocalizedName("bench_bottom");
 					GameRegistry.registerBlock(woodlandPlank, Common.modid + woodlandPlank.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(woodlandPlank, "Woodland Plank");
+						
+				redCrystal = new BlockRedCrystal(218, 1, Material.glass).setStepSound(Block.soundGlassFootstep).setHardness(5.0F).setUnlocalizedName("redCrystalParticles");
+					GameRegistry.registerBlock(redCrystal, Common.modid + redCrystal.getUnlocalizedName().substring(5));
+						LanguageRegistry.addName(redCrystal, "Red Crystal");
 						
 		//Adding the Blocks
 				GameRegistry.registerBlock(starDustGrass, Common.modid + starDustGrass.getUnlocalizedName().substring(5));
