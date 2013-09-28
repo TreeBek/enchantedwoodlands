@@ -6,7 +6,6 @@ import java.util.HashMap;
 import java.util.List;
 
 import Mod.enchantedwoodlands.Blocks.Blocks;
-import Mod.enchantedwoodlands.Crafting.CraftingWoodland;
 import Mod.enchantedwoodlands.Items.Items;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;

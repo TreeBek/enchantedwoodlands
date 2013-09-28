@@ -11,6 +11,8 @@ import Mod.enchantedwoodlands.Crafting.Crafting;
 import Mod.enchantedwoodlands.Dimension.Dimensions;
 import Mod.enchantedwoodlands.Dimension.MythicalEventClass;
 import Mod.enchantedwoodlands.Dimension.Biomes.OreWorldGen;
+import Mod.enchantedwoodlands.Dimension.Structure.Structure;
+import Mod.enchantedwoodlands.Dimension.Structure.testCastle;
 import Mod.enchantedwoodlands.Gui.GuiHandlerEnchantedWoodlands;
 import Mod.enchantedwoodlands.Items.ItemPortalPlacer;
 import Mod.enchantedwoodlands.Items.Items;
@@ -103,6 +105,7 @@ private static GuiHandlerEnchantedWoodlands guiHandlerEnchantedWoodlands = new G
  /** Dimension **/
 public static int DimID = 2;
 
+
 @EventHandler
 public static void Init(FMLInitializationEvent event)
 {
@@ -112,6 +115,7 @@ public static void Init(FMLInitializationEvent event)
 	Crafting.Init();
 	NetworkRegistry.instance().registerGuiHandler(guiHandlerEnchantedWoodlands, guiHandlerEnchantedWoodlands);
 	proxy.registerRenderThings();
+	Structure.Init();
 	
 }
 

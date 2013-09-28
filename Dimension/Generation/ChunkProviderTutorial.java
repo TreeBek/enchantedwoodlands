@@ -19,6 +19,8 @@ import Mod.enchantedwoodlands.Dimension.Plants.WorldGenExepditeTree;
 import Mod.enchantedwoodlands.Dimension.Plants.WorldGenTestForestTree;
 import Mod.enchantedwoodlands.Dimension.Plants.WorldGenTestHugeTree;
 import Mod.enchantedwoodlands.Dimension.Plants.WorldGenTestTree;
+import Mod.enchantedwoodlands.Dimension.Structure.WorldGeneratorTestCastle;
+import Mod.enchantedwoodlands.Dimension.Structure.testCastle;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSand;
 import net.minecraft.entity.EnumCreatureType;
@@ -478,8 +480,18 @@ public class ChunkProviderTutorial implements IChunkProvider {
 			l1 = this.rand.nextInt(128);
 			i2 = l + this.rand.nextInt(16) + 8;
 			(new WorldGenLakes(Block.waterStill.blockID)).generate(this.worldObj, this.rand, k1, l1, i2);
-		}
 
+		}
+		testCastle tree = new testCastle();
+		if (rand.nextFloat() < 0.01F){
+		  for(int x = 0;x<1;x++)
+		  {
+			k1 = k + rand.nextInt(16);
+			l1 = l + rand.nextInt(16);
+			i2 = worldObj.getHeightValue(k1, l1);
+		   tree.generate(worldObj, rand, k1, i2, l1);
+		  }
+		}
 		if (TerrainGen.populate(par1IChunkProvider, worldObj, rand, par2, par3, flag, LAVA) && !flag && this.rand.nextInt(8) == 0) {
 			k1 = k + this.rand.nextInt(16) + 8;
 			l1 = this.rand.nextInt(this.rand.nextInt(120) + 8);
@@ -600,6 +612,7 @@ public class ChunkProviderTutorial implements IChunkProvider {
 
 		BlockSand.fallInstantly = false;
 	}
+	
 
 	/**
 	 * Two modes of operation: if passed true, save all Chunks in one go. If

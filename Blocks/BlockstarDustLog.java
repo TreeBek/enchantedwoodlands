@@ -4,12 +4,14 @@ import java.util.List;
 import java.util.Random;
 
 import Mod.enchantedwoodlands.Common.Common;
+import Mod.enchantedwoodlands.Dimension.Structure.WorldGeneratorTestCastle;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
@@ -89,6 +91,7 @@ public boolean canSustainLeaves(World world, int x, int y, int z)
 {
 return true;
 }
+
 
 @Override
 public boolean isWood(World world, int x, int y, int z)

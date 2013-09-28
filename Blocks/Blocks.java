@@ -54,11 +54,11 @@ public class Blocks {
 					GameRegistry.registerBlock(swiftnessFruit, Common.modid + swiftnessFruit.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(swiftnessFruit, "Swiftness Fruit Block");
 						
-				woodlandBench = new BlockWoodlandBench(216).setUnlocalizedName("woodlandBench");
+				woodlandBench = new BlockWoodlandBench(216).setHardness(2.5f).setUnlocalizedName("woodlandBench");
 					GameRegistry.registerBlock(woodlandBench, Common.modid + woodlandBench.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(woodlandBench, "Woodland Bench");
 						
-				woodlandPlank = new BlockBaseBlock(217, Material.wood).setHardness(2.0F).setUnlocalizedName("bench_bottom");
+				woodlandPlank = new BlockBaseBlock(217, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.0F).setUnlocalizedName("bench_bottom");
 					GameRegistry.registerBlock(woodlandPlank, Common.modid + woodlandPlank.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(woodlandPlank, "Woodland Plank");
 						
