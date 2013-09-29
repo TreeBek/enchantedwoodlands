@@ -79,13 +79,14 @@ public class Blocks {
 					GameRegistry.registerBlock(tier1KeyBlock, Common.modid + tier1KeyBlock.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(tier1KeyBlock, "Tier1 KeyBlock");
 						
-				lockedDoorBlock = new BlockBaseBlock(222, Material.wood).setStepSound(Block.soundWoodFootstep).setBlockUnbreakable().setUnlocalizedName("lockedDoor");
+				lockedDoorBlock = new BlockBaseBlock(222, Material.wood).setStepSound(Block.soundWoodFootstep).setBlockUnbreakable().setUnlocalizedName("lockedDoor").setResistance(6000000.0F);
 					GameRegistry.registerBlock(lockedDoorBlock, Common.modid + lockedDoorBlock.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(lockedDoorBlock, "Locked DoorBlock");
 							
-				tier1LockedDoorBlock = new Blocktier1LockedDoorBlock(221, Material.wood).setStepSound(Block.soundWoodFootstep).setBlockUnbreakable().setUnlocalizedName("tier1LockedDoor");
+				tier1LockedDoorBlock = new Blocktier1LockedDoorBlock(221, Material.wood).setStepSound(Block.soundWoodFootstep).setBlockUnbreakable().setUnlocalizedName("tier1LockedDoor").setResistance(6000000.0F);
 					GameRegistry.registerBlock(tier1LockedDoorBlock, Common.modid + tier1LockedDoorBlock.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(tier1LockedDoorBlock, "Tier1 Locked-DoorBlock");
+								
 						
 				tier1Enchanter = new BlockTier1Enchanter(Common.tier1EnchanterID, 1, Material.wood).setStepSound(Block.soundWoodFootstep).setBlockUnbreakable().setUnlocalizedName("tier1EnchanterParticles");
 					GameRegistry.registerBlock(tier1Enchanter, Common.modid + tier1Enchanter.getUnlocalizedName().substring(5));
