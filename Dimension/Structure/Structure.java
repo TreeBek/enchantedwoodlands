@@ -6,7 +6,7 @@ public class Structure {
 	
 	public static void Init(){
 	
-		GameRegistry.registerWorldGenerator(new WorldGeneratorTestCastle());
+		GameRegistry.registerWorldGenerator(new WorldGeneratorCastleTier1Crystal());
 		
 		}
 }

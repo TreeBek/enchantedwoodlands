@@ -3,6 +3,7 @@ package Mod.enchantedwoodlands.Blocks;
 import java.util.Random;
 
 import Mod.enchantedwoodlands.Common.Common;
+import Mod.enchantedwoodlands.Dimension.Structure.CastleTier1Crystal;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -11,6 +12,7 @@ import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 public class BlockMythicalLeaf extends Block
 {
@@ -22,6 +24,8 @@ this.setStepSound(soundGrassFootstep);
 this.setHardness(0.2F);
 this.setTickRandomly(true);
 }
+
+
 
 public boolean isOpaqueCube()
 {
@@ -41,6 +45,7 @@ public int quantityDropped(Random par1Random)
 {
 return 0;
 }
+
 @SideOnly(Side.CLIENT)
 public void registerIcons(IconRegister par1IconRegister)
 {

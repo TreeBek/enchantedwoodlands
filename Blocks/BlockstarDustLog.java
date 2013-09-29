@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Random;
 
 import Mod.enchantedwoodlands.Common.Common;
-import Mod.enchantedwoodlands.Dimension.Structure.WorldGeneratorTestCastle;
+import Mod.enchantedwoodlands.Dimension.Structure.CastleTier1Crystal;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -30,6 +30,7 @@ super(par1, Material.wood);
 this.setCreativeTab(Common.EnchWoodRPGTab);
 this.setStepSound(soundWoodFootstep);
 }
+
 
 /**
 * Called when a block is placed using its ItemBlock. Args: World, X, Y, Z, side, hitX, hitY, hitZ, block metadata

@@ -30,6 +30,7 @@ public class Blocks {
 	public static Block tier1KeyBlock;
 	public static Block lockedDoorBlock;
 	public static Block tier1LockedDoorBlock;
+	public static Block tier1Enchanter;
 	
 	public static void Init(){
 	{
@@ -85,6 +86,10 @@ public class Blocks {
 				tier1LockedDoorBlock = new Blocktier1LockedDoorBlock(221, Material.wood).setStepSound(Block.soundWoodFootstep).setBlockUnbreakable().setUnlocalizedName("tier1LockedDoor");
 					GameRegistry.registerBlock(tier1LockedDoorBlock, Common.modid + tier1LockedDoorBlock.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(tier1LockedDoorBlock, "Tier1 Locked-DoorBlock");
+						
+				tier1Enchanter = new BlockTier1Enchanter(Common.tier1EnchanterID, 1, Material.wood).setStepSound(Block.soundWoodFootstep).setBlockUnbreakable().setUnlocalizedName("tier1EnchanterParticles");
+					GameRegistry.registerBlock(tier1Enchanter, Common.modid + tier1Enchanter.getUnlocalizedName().substring(5));
+						LanguageRegistry.addName(tier1Enchanter, "Tier1 Enchanter");
 						
 		//Adding the Blocks
 				GameRegistry.registerBlock(starDustGrass, Common.modid + starDustGrass.getUnlocalizedName().substring(5));

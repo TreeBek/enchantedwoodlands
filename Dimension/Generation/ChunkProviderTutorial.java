@@ -19,8 +19,7 @@ import Mod.enchantedwoodlands.Dimension.Plants.WorldGenExepditeTree;
 import Mod.enchantedwoodlands.Dimension.Plants.WorldGenTestForestTree;
 import Mod.enchantedwoodlands.Dimension.Plants.WorldGenTestHugeTree;
 import Mod.enchantedwoodlands.Dimension.Plants.WorldGenTestTree;
-import Mod.enchantedwoodlands.Dimension.Structure.WorldGeneratorTestCastle;
-import Mod.enchantedwoodlands.Dimension.Structure.testCastle;
+import Mod.enchantedwoodlands.Dimension.Structure.CastleTier1Crystal;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSand;
 import net.minecraft.entity.EnumCreatureType;
@@ -482,7 +481,7 @@ public class ChunkProviderTutorial implements IChunkProvider {
 			(new WorldGenLakes(Block.waterStill.blockID)).generate(this.worldObj, this.rand, k1, l1, i2);
 
 		}
-		testCastle tree = new testCastle();
+		CastleTier1Crystal tree = new CastleTier1Crystal();
 		if (rand.nextFloat() < 0.02F){
 		  for(int x = 0;x<1;x++)
 		  {

@@ -12,12 +12,12 @@ import Mod.enchantedwoodlands.Dimension.Dimensions;
 import Mod.enchantedwoodlands.Dimension.MythicalEventClass;
 import Mod.enchantedwoodlands.Dimension.Biomes.OreWorldGen;
 import Mod.enchantedwoodlands.Dimension.Structure.Structure;
-import Mod.enchantedwoodlands.Dimension.Structure.testCastle;
 import Mod.enchantedwoodlands.Gui.GuiHandlerEnchantedWoodlands;
 import Mod.enchantedwoodlands.Items.ItemPortalPlacer;
 import Mod.enchantedwoodlands.Items.Items;
 import Mod.enchantedwoodlands.Proxy.CommonProxy;
 import Mod.enchantedwoodlands.Render.TileEntityRedCrystal;
+import Mod.enchantedwoodlands.Render.TileEntityTier1Enchanter;
 import Mod.enchantedwoodlands.Render.TileEntityTier1Key;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBreakable;
@@ -83,6 +83,7 @@ private static GuiHandlerEnchantedWoodlands guiHandlerEnchantedWoodlands = new G
 	public static int tier1KeyBlockID;
 	public static int lockedDoorBlockID;
 	public static int tier1LockedDoorBlockID;
+	public static int tier1EnchanterID;
 	
 //Item ID
 	public static int woodlandLighterID;
@@ -114,6 +115,7 @@ private static GuiHandlerEnchantedWoodlands guiHandlerEnchantedWoodlands = new G
      mythicalBricksID = config.get(Configuration.CATEGORY_BLOCK, "Mythical Bricks", 4015).getInt();
      tier1KeyBlockID = config.get(Configuration.CATEGORY_BLOCK, "Tier1 KeyBlock", 4016).getInt();
      tier1LockedDoorBlockID = config.get(Configuration.CATEGORY_BLOCK, "Tier1 LockedDoor", 4017).getInt();
+     tier1EnchanterID = config.get(Configuration.CATEGORY_BLOCK, "Tier1 Enchanter", 4019).getInt();
     
      //Items
      woodlandLighterID = config.get(Configuration.CATEGORY_ITEM, "Woodland Lighter", 7000).getInt();
@@ -142,6 +144,7 @@ public static void Init(FMLInitializationEvent event)
 	Structure.Init();
 	TileEntity.addMapping(TileEntityRedCrystal.class, "Red Crystal");
 	TileEntity.addMapping(TileEntityTier1Key.class, "Tier1 Key");
+	TileEntity.addMapping(TileEntityTier1Enchanter.class, "Tier1 Enchanter");
 	
 }
 
