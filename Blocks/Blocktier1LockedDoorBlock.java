@@ -18,7 +18,7 @@ public class Blocktier1LockedDoorBlock extends BlockBaseBlock{
 	public boolean onBlockActivated(World par1World, int par2, int par3, int par4, EntityPlayer par5EntityPlayer, int par6, float par7, float par8, float par9)
     {
 		if(par5EntityPlayer.getCurrentEquippedItem() == null || par5EntityPlayer.getCurrentEquippedItem().itemID != Items.tier1Key.itemID){	
-			par5EntityPlayer.addChatMessage("This Requires a Tier 1 key to open");
+			par5EntityPlayer.addChatMessage("[This Requires a Tier 1 key to Unlock]");
 			return true;
 		}else
 			return false;
