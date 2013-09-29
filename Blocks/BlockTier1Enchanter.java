@@ -27,6 +27,7 @@ public class BlockTier1Enchanter extends BlockContainer {
 public BlockTier1Enchanter(int id, int texture, Material material) {
 super(id, material);
 this.setCreativeTab(Common.EnchWoodRPGTab);
+this.setBlockBounds(0F, 0F, 0F, 1F, 0.55F, 1F);
 }
 
 public int idDropped(int par1, Random par2Random, int par3)
