@@ -82,7 +82,7 @@ public class Blocks {
 					GameRegistry.registerBlock(lockedDoorBlock, Common.modid + lockedDoorBlock.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(lockedDoorBlock, "Locked DoorBlock");
 							
-				tier1LockedDoorBlock = new BlockBaseBlock(221, Material.wood).setStepSound(Block.soundWoodFootstep).setBlockUnbreakable().setUnlocalizedName("tier1LockedDoor");
+				tier1LockedDoorBlock = new Blocktier1LockedDoorBlock(221, Material.wood).setStepSound(Block.soundWoodFootstep).setBlockUnbreakable().setUnlocalizedName("tier1LockedDoor");
 					GameRegistry.registerBlock(tier1LockedDoorBlock, Common.modid + tier1LockedDoorBlock.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(tier1LockedDoorBlock, "Tier1 Locked-DoorBlock");
 						
