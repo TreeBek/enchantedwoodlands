@@ -3,7 +3,7 @@ package Mod.enchantedwoodlands.Items;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import Mod.enchantedwoodlands.Common.Common;
-import Mod.enchantedwoodlands.Dimension.Generation.MythicalTeleporter;
+import Mod.enchantedwoodlands.Dimension.Generation.LuminousForest.LuminousTeleporter;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -32,7 +32,7 @@ public class ItemTeleWand extends Item{
 			if (thePlayer.dimension == Common.DimID)
         	{
 				par1ItemStack.damageItem(1, par3EntityPlayer);
-                thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, Common.DimID, new MythicalTeleporter(thePlayer.mcServer.worldServerForDimension(Common.DimID)));
+                thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, Common.DimID, new LuminousTeleporter(thePlayer.mcServer.worldServerForDimension(Common.DimID)));
         	}
         	
         }

@@ -11,7 +11,7 @@ public class Crafting {
 	public static void Init(){
 		GameRegistry.addRecipe(new ItemStack(Blocks.woodlandBench), new Object[] {"##", "##", '#', Blocks.woodlandPlank});
 		
-		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.woodlandPlank, 4), new Object[] {Blocks.starDustLog});
+		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.woodlandPlank, 4), new Object[] {Blocks.woodlandLog});
 		
 		}
 	

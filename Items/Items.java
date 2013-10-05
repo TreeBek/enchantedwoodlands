@@ -11,6 +11,9 @@ import net.minecraftforge.common.Configuration;
 
 import net.minecraftforge.common.EnumHelper;
 import Mod.enchantedwoodlands.Common.Common;
+import Mod.enchantedwoodlands.Items.LuminousForest.ItemKeyOne;
+import Mod.enchantedwoodlands.Items.LuminousForest.ItemPortalPlacer;
+import Mod.enchantedwoodlands.Items.LuminousForest.ItemSwiftFruit;
 import net.minecraft.item.Item;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -29,19 +32,19 @@ public class Items {
 	{
 	
 		//Item Properties
-		woodlandLighter = new ItemWoodlandsLighter(7000).setUnlocalizedName("woodlandLighter");
+		woodlandLighter = new ItemWoodlandsLighter(Common.woodlandLighterID).setUnlocalizedName("woodlandLighter");
 			LanguageRegistry.addName(woodlandLighter, "Woodland Lighter");
 		
-		mythicalPortalPlacer = new ItemPortalPlacer(7001).setUnlocalizedName("mythicalPortalPlacer");
+		mythicalPortalPlacer = new ItemPortalPlacer(Common.mythicalPortalPlacerID).setUnlocalizedName("mythicalPortalPlacer");
 		 	LanguageRegistry.addName(mythicalPortalPlacer, "Mythical Portal Placer");
         
-		teleWand = new ItemTeleWand(7002).setUnlocalizedName("teleWand");
+		teleWand = new ItemTeleWand(Common.teleWandID).setUnlocalizedName("teleWand");
 			LanguageRegistry.addName(teleWand, "Tele-Wand");
 			
-		swiftnessFruit = new ItemSwiftFruit(7003, 3, 0.1F, false).setUnlocalizedName("swiftnessFruit");
+		swiftnessFruit = new ItemSwiftFruit(Common.swiftnessFruitID, 3, 0.1F, false).setUnlocalizedName("swiftnessFruit");
 			LanguageRegistry.addName(swiftnessFruit, "Swiftness Fruit");
 			
-		tier1Key = new ItemKeyOne(7004).setUnlocalizedName("tier1Key");
+		tier1Key = new ItemKeyOne(Common.tier1KeyID).setUnlocalizedName("tier1Key");
 			LanguageRegistry.addName(tier1Key, "Tier-1 Key");
 		
 	   }

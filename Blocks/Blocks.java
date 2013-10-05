@@ -1,10 +1,20 @@
 package Mod.enchantedwoodlands.Blocks;
 
-import Mod.enchantedwoodlands.Common.Common;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraftforge.common.MinecraftForge;
-import cpw.mods.fml.common.event.FMLInitializationEvent;
+import Mod.enchantedwoodlands.Blocks.LuminousForest.BlockLuminousPortal;
+import Mod.enchantedwoodlands.Blocks.LuminousForest.BlockRedCrystal;
+import Mod.enchantedwoodlands.Blocks.LuminousForest.BlockStarDustFlower;
+import Mod.enchantedwoodlands.Blocks.LuminousForest.BlockStarDustGrass;
+import Mod.enchantedwoodlands.Blocks.LuminousForest.BlockSwiftnessFruit;
+import Mod.enchantedwoodlands.Blocks.LuminousForest.BlockTier1Enchanter;
+import Mod.enchantedwoodlands.Blocks.LuminousForest.BlockTier1KeyCrystal;
+import Mod.enchantedwoodlands.Blocks.LuminousForest.BlockWoodlandGrass;
+import Mod.enchantedwoodlands.Blocks.LuminousForest.BlockWoodlandLeaf;
+import Mod.enchantedwoodlands.Blocks.LuminousForest.BlockWoodlandLog;
+import Mod.enchantedwoodlands.Blocks.LuminousForest.BlockWoodlandSapling;
+import Mod.enchantedwoodlands.Blocks.LuminousForest.Blocktier1LockedDoorBlock;
+import Mod.enchantedwoodlands.Common.Common;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -12,16 +22,16 @@ public class Blocks {
 	
 	//BLOCKS
 	public static BlockWoodlandFire woodlandFire;
-	public static BlockWoodlandPortal woodlandPortal;
-	public static final Block starDustGrass = new BlockTutorialGrass(225).setHardness(0.6F).setUnlocalizedName("starDustGrass");
+	public static BlockLuminousPortal luminousPortal;
+	public static Block starDustGrass;
 	public static Block mythicalStone;
-	public static final Block starDustFlower = new BlockStarDustFlower(207).setUnlocalizedName("starDustFlower");
-	public static final Block starDustLog = new BlockstarDustLog(208).setHardness(2.3F).setUnlocalizedName("woodlandLog");
-	public static final Block starDustLeaf = new BlockMythicalLeaf(209).setUnlocalizedName("woodlandLeaf");
-	public static final Block starDustSapling = new BlockStarDustSapling(210, 0).setUnlocalizedName("starDustSapling");
+	public static final Block starDustFlower = new BlockStarDustFlower(Common.starDustFlowerID).setUnlocalizedName("starDustFlower");
+	public static final Block woodlandLog = new BlockWoodlandLog(Common.starDustLogID).setHardness(2.3F).setUnlocalizedName("woodlandLog");
+	public static final Block woodlandLeaf = new BlockWoodlandLeaf(Common.starDustLeafID).setUnlocalizedName("woodlandLeaf");
+	public static final Block woodlandSapling = new BlockWoodlandSapling(Common.starDustSaplingID, 0).setUnlocalizedName("starDustSapling");
 	public static Block woodlandGrass; 
 	public static Block exepditeLog;
-	public static final Block exepditeLeaf = new BlockMythicalLeaf(214).setUnlocalizedName("exepditeLeaf");
+	public static final Block exepditeLeaf = new BlockWoodlandLeaf(Common.exepditeLeafID).setUnlocalizedName("exepditeLeaf");
 	public static Block swiftnessFruit;
 	public static Block woodlandBench;
 	public static Block woodlandPlank;
@@ -35,55 +45,55 @@ public class Blocks {
 	public static void Init(){
 	{
 		//Block Properties
-				woodlandFire = (BlockWoodlandFire) new BlockWoodlandFire(4000).setUnlocalizedName("woodlandFire");
+				woodlandFire = (BlockWoodlandFire) new BlockWoodlandFire(Common.woodlandFireID).setUnlocalizedName("woodlandFire");
 					GameRegistry.registerBlock(woodlandFire, Common.modid + woodlandFire.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(woodlandFire, "Woodland Fire");
 						
-				woodlandPortal = (BlockWoodlandPortal) new BlockWoodlandPortal(4002).setUnlocalizedName("woodlandPortal");
-					GameRegistry.registerBlock(woodlandPortal, Common.modid + woodlandPortal.getUnlocalizedName().substring(5));
-						LanguageRegistry.addName(woodlandPortal, "Woodland Portal");
+				luminousPortal = (BlockLuminousPortal) new BlockLuminousPortal(Common.woodlandPortalID).setUnlocalizedName("woodlandPortal");
+					GameRegistry.registerBlock(luminousPortal, Common.modid + luminousPortal.getUnlocalizedName().substring(5));
+						LanguageRegistry.addName(luminousPortal, "Luminous Portal");
 					
-				woodlandGrass = new BlockWoodlandGrass(211).setHardness(0.7F).setUnlocalizedName("woodlandGrass");
+				woodlandGrass = new BlockWoodlandGrass(Common.woodlandGrassID).setHardness(0.7F).setUnlocalizedName("woodlandGrass");
 					GameRegistry.registerBlock(woodlandGrass, Common.modid + woodlandGrass.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(woodlandGrass, "Woodland Grass");
 							
-				mythicalStone = new BlockBaseBlock(206, Material.rock).setHardness(2.5F).setUnlocalizedName("mythicalStone");
+				mythicalStone = new BlockBaseBlock(Common.mythicalStoneID, Material.rock).setHardness(2.5F).setUnlocalizedName("mythicalStone");
 					GameRegistry.registerBlock(mythicalStone, Common.modid + mythicalStone.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(mythicalStone, "Mythical Stone");
 						
-				exepditeLog = new BlockstarDustLog(213).setHardness(2.0F).setUnlocalizedName("exepditeLog");
+				exepditeLog = new BlockWoodlandLog(Common.exepditeLogID).setHardness(2.0F).setUnlocalizedName("exepditeLog");
 					GameRegistry.registerBlock(exepditeLog, Common.modid + exepditeLog.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(exepditeLog, "Exepdite Log");
 						
-				swiftnessFruit = new BlockSwiftnessFruit(215, Material.plants).setHardness(0.2F).setUnlocalizedName("swiftnessFruit");
+				swiftnessFruit = new BlockSwiftnessFruit(Common.swiftnessFruitBlockID, Material.plants).setHardness(0.2F).setUnlocalizedName("swiftnessFruit");
 					GameRegistry.registerBlock(swiftnessFruit, Common.modid + swiftnessFruit.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(swiftnessFruit, "Swiftness Fruit Block");
 						
-				woodlandBench = new BlockWoodlandBench(216).setHardness(2.5f).setUnlocalizedName("woodlandBench");
+				woodlandBench = new BlockWoodlandBench(Common.woodlandBenchID).setHardness(2.5f).setUnlocalizedName("woodlandBench");
 					GameRegistry.registerBlock(woodlandBench, Common.modid + woodlandBench.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(woodlandBench, "Woodland Bench");
 						
-				woodlandPlank = new BlockBaseBlock(217, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.0F).setUnlocalizedName("bench_bottom");
+				woodlandPlank = new BlockBaseBlock(Common.woodlandPlankID, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.0F).setUnlocalizedName("bench_bottom");
 					GameRegistry.registerBlock(woodlandPlank, Common.modid + woodlandPlank.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(woodlandPlank, "Woodland Plank");
 						
-				redCrystal = new BlockRedCrystal(218, 1, Material.glass).setStepSound(Block.soundGlassFootstep).setHardness(5.0F).setUnlocalizedName("redCrystalParticles");
+				redCrystal = new BlockRedCrystal(Common.redCrystalID, 1, Material.glass).setStepSound(Block.soundGlassFootstep).setHardness(5.0F).setUnlocalizedName("redCrystalParticles");
 					GameRegistry.registerBlock(redCrystal, Common.modid + redCrystal.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(redCrystal, "Red Crystal");
 						
-				mythicalBrick = new BlockBaseBlock(219, Material.rock).setHardness(2.5F).setUnlocalizedName("mythicalBrick");
+				mythicalBrick = new BlockBaseBlock(Common.mythicalBricksID, Material.rock).setHardness(2.5F).setUnlocalizedName("mythicalBrick");
 					GameRegistry.registerBlock(mythicalBrick, Common.modid + mythicalBrick.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(mythicalBrick, "Mythical Bricks");
 						
-				tier1KeyBlock = new BlockTier1KeyCrystal(220, 1, Material.wood).setStepSound(Block.soundMetalFootstep).setHardness(0.1F).setUnlocalizedName("tier1KeyParticles");
+				tier1KeyBlock = new BlockTier1KeyCrystal(Common.tier1KeyBlockID, 1, Material.wood).setStepSound(Block.soundMetalFootstep).setHardness(0.1F).setUnlocalizedName("tier1KeyParticles");
 					GameRegistry.registerBlock(tier1KeyBlock, Common.modid + tier1KeyBlock.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(tier1KeyBlock, "Tier1 KeyBlock");
 						
-				lockedDoorBlock = new BlockBaseBlock(222, Material.wood).setStepSound(Block.soundWoodFootstep).setBlockUnbreakable().setUnlocalizedName("lockedDoor").setResistance(6000000.0F);
+				lockedDoorBlock = new BlockBaseBlock(Common.tier1LockedDoorBlockID + 1, Material.wood).setStepSound(Block.soundWoodFootstep).setBlockUnbreakable().setUnlocalizedName("lockedDoor").setResistance(6000000.0F);
 					GameRegistry.registerBlock(lockedDoorBlock, Common.modid + lockedDoorBlock.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(lockedDoorBlock, "Locked DoorBlock");
 							
-				tier1LockedDoorBlock = new Blocktier1LockedDoorBlock(221, Material.wood).setStepSound(Block.soundWoodFootstep).setBlockUnbreakable().setUnlocalizedName("tier1LockedDoor").setResistance(6000000.0F);
+				tier1LockedDoorBlock = new Blocktier1LockedDoorBlock(Common.tier1LockedDoorBlockID, Material.wood).setStepSound(Block.soundWoodFootstep).setBlockUnbreakable().setUnlocalizedName("tier1LockedDoor").setResistance(6000000.0F);
 					GameRegistry.registerBlock(tier1LockedDoorBlock, Common.modid + tier1LockedDoorBlock.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(tier1LockedDoorBlock, "Tier1 Locked-DoorBlock");
 								
@@ -92,19 +102,21 @@ public class Blocks {
 					GameRegistry.registerBlock(tier1Enchanter, Common.modid + tier1Enchanter.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(tier1Enchanter, "Tier1 Enchanter");
 						
+				starDustGrass = new BlockStarDustGrass(Common.starDustGrassID).setHardness(0.6F).setUnlocalizedName("starDustGrass");
+					GameRegistry.registerBlock(starDustGrass, Common.modid + starDustGrass.getUnlocalizedName().substring(5));	
+						LanguageRegistry.addName(starDustGrass, "StarDust Grass");
+					
 		//Adding the Blocks
-				GameRegistry.registerBlock(starDustGrass, Common.modid + starDustGrass.getUnlocalizedName().substring(5));
-				GameRegistry.registerBlock(starDustLog, Common.modid + starDustLog.getUnlocalizedName().substring(5));
-				GameRegistry.registerBlock(starDustLeaf, Common.modid + starDustLeaf.getUnlocalizedName().substring(5));
-				GameRegistry.registerBlock(starDustSapling, Common.modid + starDustSapling.getUnlocalizedName().substring(5));
+				GameRegistry.registerBlock(woodlandLog, Common.modid + woodlandLog.getUnlocalizedName().substring(5));
+				GameRegistry.registerBlock(woodlandLeaf, Common.modid + woodlandLeaf.getUnlocalizedName().substring(5));
+				GameRegistry.registerBlock(woodlandSapling, Common.modid + woodlandSapling.getUnlocalizedName().substring(5));
 				GameRegistry.registerBlock(starDustFlower, Common.modid + starDustFlower.getUnlocalizedName().substring(5));
 				GameRegistry.registerBlock(exepditeLeaf, Common.modid + exepditeLeaf.getUnlocalizedName().substring(5));
 				
 		//Block Name
-				LanguageRegistry.addName(starDustGrass, "StarDust Grass");
-				LanguageRegistry.addName(starDustLog, "StarDust Log");
-				LanguageRegistry.addName(starDustLeaf, "StarDust Leaf");
-				LanguageRegistry.addName(starDustSapling, "StarDust Sapling");
+				LanguageRegistry.addName(woodlandLog, "StarDust Log");
+				LanguageRegistry.addName(woodlandLeaf, "StarDust Leaf");
+				LanguageRegistry.addName(woodlandSapling, "StarDust Sapling");
 				LanguageRegistry.addName(starDustFlower, "StarDust Flower");
 				LanguageRegistry.addName(exepditeLog, "Exepdite Log");
 		

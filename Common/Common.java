@@ -1,24 +1,19 @@
 package Mod.enchantedwoodlands.Common;
 
 
-import Mod.enchantedwoodlands.Blocks.BlockMythicalLeaf;
-import Mod.enchantedwoodlands.Blocks.BlockStarDustFlower;
-import Mod.enchantedwoodlands.Blocks.BlockStarDustSapling;
-import Mod.enchantedwoodlands.Blocks.BlockTutorialGrass;
+
 import Mod.enchantedwoodlands.Blocks.Blocks;
-import Mod.enchantedwoodlands.Blocks.BlockstarDustLog;
 import Mod.enchantedwoodlands.Crafting.Crafting;
 import Mod.enchantedwoodlands.Dimension.Dimensions;
-import Mod.enchantedwoodlands.Dimension.MythicalEventClass;
 import Mod.enchantedwoodlands.Dimension.Biomes.OreWorldGen;
 import Mod.enchantedwoodlands.Dimension.Structure.Structure;
 import Mod.enchantedwoodlands.Gui.GuiHandlerEnchantedWoodlands;
-import Mod.enchantedwoodlands.Items.ItemPortalPlacer;
+import Mod.enchantedwoodlands.Items.LuminousForest.ItemPortalPlacer;
 import Mod.enchantedwoodlands.Items.Items;
 import Mod.enchantedwoodlands.Proxy.CommonProxy;
-import Mod.enchantedwoodlands.Render.TileEntityRedCrystal;
-import Mod.enchantedwoodlands.Render.TileEntityTier1Enchanter;
-import Mod.enchantedwoodlands.Render.TileEntityTier1Key;
+import Mod.enchantedwoodlands.Render.TitleEntity.TileEntityRedCrystal;
+import Mod.enchantedwoodlands.Render.TitleEntity.TileEntityTier1Enchanter;
+import Mod.enchantedwoodlands.Render.TitleEntity.TileEntityTier1Key;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBreakable;
 import net.minecraft.block.BlockFire;
@@ -81,7 +76,6 @@ private static GuiHandlerEnchantedWoodlands guiHandlerEnchantedWoodlands = new G
 	public static int redCrystalID;
 	public static int mythicalBricksID;
 	public static int tier1KeyBlockID;
-	public static int lockedDoorBlockID;
 	public static int tier1LockedDoorBlockID;
 	public static int tier1EnchanterID;
 	
@@ -99,24 +93,23 @@ private static GuiHandlerEnchantedWoodlands guiHandlerEnchantedWoodlands = new G
      //Blocks
      woodlandFireID = config.get(Configuration.CATEGORY_BLOCK, "Woodland Fire", 4000).getInt();
      woodlandPortalID = config.get(Configuration.CATEGORY_BLOCK, "Woodland Portal", 4001).getInt();
-     starDustGrassID = config.getTerrainBlock("Enchanted Woodlands Generation", "StarDust Grass", 4002, "").getInt();
-     mythicalStoneID = config.getTerrainBlock("Enchanted Woodlands Generation", "Mythical Stone", 4003,"").getInt();
-     starDustFlowerID = config.getTerrainBlock("Enchanted Woodlands Generation", "StarDust Flower", 4004,"").getInt();
-     starDustLogID = config.getTerrainBlock("Enchanted Woodlands Generation", "StarDust Log", 4005,"").getInt();
-     starDustLeafID = config.getTerrainBlock("Enchanted Woodlands Generation", "StarDust Leaves", 4006, "").getInt();
+     starDustGrassID = config.getTerrainBlock("Enchanted Woodlands Generation", "StarDust Grass", 200,null).getInt();
+     mythicalStoneID = config.get(Configuration.CATEGORY_BLOCK, "Mythical Stone", 4003).getInt();
+     starDustFlowerID = config.get(Configuration.CATEGORY_BLOCK,"StarDust Flower", 4004).getInt();
+     starDustLogID = config.get(Configuration.CATEGORY_BLOCK, "StarDust Log", 4005).getInt();
+     starDustLeafID = config.get(Configuration.CATEGORY_BLOCK, "StarDust Leaves", 4006).getInt();
      starDustSaplingID = config.get(Configuration.CATEGORY_BLOCK, "StarDust Sapling", 4007).getInt();
-     woodlandGrassID = config.getTerrainBlock("Enchanted Woodlands Generation", "Woodline Grass", 4008,"").getInt();
-     exepditeLogID = config.getTerrainBlock("Enchanted Woodlands Generation", "Exepdite Log", 4009,"").getInt();
-     exepditeLeafID = config.getTerrainBlock("Enchanted Woodlands Generation", "Exepdite Leaves", 4010, "").getInt();
-     swiftnessFruitBlockID = config.getTerrainBlock("Enchanted Woodlands Generation", "Swiftness FruitBlock", 4011,"").getInt();
+     woodlandGrassID = config.getTerrainBlock("Enchanted Woodlands Generation", "Woodline Grass", 201,null).getInt();
+     exepditeLogID = config.get(Configuration.CATEGORY_BLOCK, "Exepdite Log", 4009).getInt();
+     exepditeLeafID = config.get(Configuration.CATEGORY_BLOCK, "Exepdite Leaves", 4010).getInt();
+     swiftnessFruitBlockID = config.get(Configuration.CATEGORY_BLOCK, "Swiftness FruitBlock", 4011).getInt();
      woodlandBenchID = config.get(Configuration.CATEGORY_BLOCK, "Woodland Bench", 4012).getInt();
      woodlandPlankID = config.get(Configuration.CATEGORY_BLOCK, "Woodland Planks", 4013).getInt();
      redCrystalID = config.get(Configuration.CATEGORY_BLOCK, "Red Crystal", 4014).getInt();
      mythicalBricksID = config.get(Configuration.CATEGORY_BLOCK, "Mythical Bricks", 4015).getInt();
      tier1KeyBlockID = config.get(Configuration.CATEGORY_BLOCK, "Tier1 KeyBlock", 4016).getInt();
-     tier1LockedDoorBlockID = config.get(Configuration.CATEGORY_BLOCK, "Tier1 LockedDoor", 4017).getInt();
      tier1EnchanterID = config.get(Configuration.CATEGORY_BLOCK, "Tier1 Enchanter", 4019).getInt();
-    
+     tier1LockedDoorBlockID = config.get("AVOID CHANGING", "Tier1 LockedDoor", 4017,"But if you do make sure there is always an ID open one above this one's!").getInt();
      //Items
      woodlandLighterID = config.get(Configuration.CATEGORY_ITEM, "Woodland Lighter", 7000).getInt();
      mythicalPortalPlacerID = config.get(Configuration.CATEGORY_ITEM, "Mythical PortalPlacer", 7001).getInt();

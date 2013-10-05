@@ -3,7 +3,8 @@ package Mod.enchantedwoodlands.Dimension.Biomes;
 import java.util.Random;
 
 import Mod.enchantedwoodlands.Blocks.Blocks;
-import Mod.enchantedwoodlands.Dimension.Plants.WorldGenMythicFlowers;
+import Mod.enchantedwoodlands.Dimension.Biomes.LuminousForest.WoodlandForest;
+import Mod.enchantedwoodlands.Dimension.Plants.LuminousForest.WorldGenStarDustFlowers;
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
@@ -62,25 +63,6 @@ public class OreWorldGen implements IWorldGenerator
             int randPosX = chunkX + rand.nextInt(16);
             int randPosY = rand.nextInt(50);
             int randPosZ = chunkZ + rand.nextInt(16);
-            	
-            (new WorldGenMinable(Block.glowStone.blockID, 10)).generate(world, rand,
-        			randPosX, randPosY, randPosZ);
-        }
-        for (int i = 0; i < 15; i++)
-        {
-            //16x16 area up to y = 64
-            int randPosX = chunkX + rand.nextInt(16);
-            int randPosY = rand.nextInt(20);
-            int randPosZ = chunkZ + rand.nextInt(16);
-            // 10 blocks per vein
-        }
-        for (int i = 0; i < 10; i++)
-        {
-            //16x16 area up to y = 64
-            int randPosX = chunkX + rand.nextInt(16);
-            int randPosY = rand.nextInt(15);
-            int randPosZ = chunkZ + rand.nextInt(16);
-            // 10 blocks per vein
         }
     }
 
@@ -112,14 +94,14 @@ public class OreWorldGen implements IWorldGenerator
     
     BiomeGenBase biomegenbase = world.getWorldChunkManager().getBiomeGenAt(chunkX, chunkZ);
 
-if(biomegenbase instanceof Biome1)
+if(biomegenbase instanceof WoodlandForest)
     {
      for(int k = 0; k < 75; k++)
      {
           int randPosX = chunkX + random.nextInt(16);
           int randPosY = random.nextInt(220);
           int randPosZ = chunkZ + random.nextInt(16);
-          (new WorldGenMythicFlowers(Blocks.starDustFlower.blockID, 8)).generate(world, random, randPosX, randPosY, randPosZ);
+          (new WorldGenStarDustFlowers(Blocks.starDustFlower.blockID, 8)).generate(world, random, randPosX, randPosY, randPosZ);
      		}
     	}
     }

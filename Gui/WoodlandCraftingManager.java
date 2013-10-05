@@ -38,7 +38,7 @@ private WoodlandCraftingManager()
 	
 	this.func_92051_a(new ItemStack(Blocks.woodlandBench), new Object[] {"##", "##", '#', Blocks.woodlandPlank});
 		
-	this.addBuilderShapelessRecipe(new ItemStack(Blocks.woodlandPlank, 4), new Object[] {Blocks.starDustLog});
+	this.addBuilderShapelessRecipe(new ItemStack(Blocks.woodlandPlank, 4), new Object[] {Blocks.woodlandLog});
 		
 		
          //This is where your recipes will go

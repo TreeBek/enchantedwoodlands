@@ -7,6 +7,8 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
 import Mod.enchantedwoodlands.Common.Common;
+import Mod.enchantedwoodlands.Render.Models.ModelRedCrystal;
+import Mod.enchantedwoodlands.Render.TitleEntity.TileEntityRedCrystal;
 
 
 public class TileEntityRedCrystalRenderer extends TileEntitySpecialRenderer
