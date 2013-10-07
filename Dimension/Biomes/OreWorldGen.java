@@ -3,8 +3,10 @@ package Mod.enchantedwoodlands.Dimension.Biomes;
 import java.util.Random;
 
 import Mod.enchantedwoodlands.Blocks.Blocks;
+import Mod.enchantedwoodlands.Dimension.Biomes.LuminousForest.StarDustFields;
 import Mod.enchantedwoodlands.Dimension.Biomes.LuminousForest.WoodlandForest;
 import Mod.enchantedwoodlands.Dimension.Plants.LuminousForest.WorldGenStarDustFlowers;
+import Mod.enchantedwoodlands.Dimension.Plants.LuminousForest.WorldGenWoodlandLongGrass;
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
@@ -92,11 +94,11 @@ public class OreWorldGen implements IWorldGenerator
     }
     for(int k = 0; k < 4; k++); //Creates a new integer, 'k', which is between 0 and whatever we used for the rarity.
     
-    BiomeGenBase biomegenbase = world.getWorldChunkManager().getBiomeGenAt(chunkX, chunkZ);
+  BiomeGenBase biomegenbase = world.getWorldChunkManager().getBiomeGenAt(chunkX, chunkZ);
 
 if(biomegenbase instanceof WoodlandForest)
     {
-     for(int k = 0; k < 75; k++)
+     for(int k = 0; k < 55; k++)
      {
           int randPosX = chunkX + random.nextInt(16);
           int randPosY = random.nextInt(220);

@@ -15,10 +15,12 @@ import java.util.List;
 import java.util.Random;
 
 import Mod.enchantedwoodlands.Blocks.Blocks;
+import Mod.enchantedwoodlands.Dimension.Biomes.LuminousForest.StarDustFields;
 import Mod.enchantedwoodlands.Dimension.Plants.LuminousForest.WorldGenExepditeTree;
 import Mod.enchantedwoodlands.Dimension.Plants.LuminousForest.WorldGenTestForestTree;
 import Mod.enchantedwoodlands.Dimension.Plants.LuminousForest.WorldGenTestHugeTree;
 import Mod.enchantedwoodlands.Dimension.Plants.LuminousForest.WorldGenTestTree;
+import Mod.enchantedwoodlands.Dimension.Plants.LuminousForest.WorldGenWoodlandLongGrass;
 import Mod.enchantedwoodlands.Dimension.Structure.LuminousForest.CastleTier1Crystal;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSand;
@@ -474,6 +476,8 @@ public class LuminousChunkProvider implements IChunkProvider {
 		int l1;
 		int i2;
 
+	
+		
 		if (TerrainGen.populate(par1IChunkProvider, worldObj, rand, par2, par3, flag, LAKE) && !flag && this.rand.nextInt(4) == 0) {
 			k1 = k + this.rand.nextInt(16) + 8;
 			l1 = this.rand.nextInt(128);
@@ -566,7 +570,7 @@ public class LuminousChunkProvider implements IChunkProvider {
                 }
         }
         //Forest Trees
-        for (int c = 60; c > 0; c--)
+        for (int c = 70; c > 0; c--)
         {
                 int j2 = k + rand.nextInt(16) + 8;
                 int l3 = rand.nextInt(120);
@@ -576,7 +580,8 @@ public class LuminousChunkProvider implements IChunkProvider {
                         new WorldGenTestForestTree(true).generate(worldObj, rand, j2, l3, j5);
                 }
         }
-        
+      
+        /*
         //Huge Trees
         for (int c = 60; c > 0; c--)
         {
@@ -588,7 +593,7 @@ public class LuminousChunkProvider implements IChunkProvider {
                         new WorldGenTestHugeTree(true, 15 + rand.nextInt(8), 0, 0).generate(worldObj, rand, j2, l3, j5);
                 }
         }
-        
+        */
         for (int c = 15; c > 0; c--)
         {
                 int j2 = k + rand.nextInt(16) + 8;
@@ -601,6 +606,17 @@ public class LuminousChunkProvider implements IChunkProvider {
         }
 		MinecraftForge.EVENT_BUS.post(new PopulateChunkEvent.Post(par1IChunkProvider, worldObj, rand, par2, par3, flag));
 
+		if(biomegenbase instanceof StarDustFields)
+		  {
+		   for(int c = 0; c < 4000; c++)
+		   {
+			   int j2 = k + rand.nextInt(16) + 8;
+             int l3 = rand.nextInt(220);
+             int j5 = l + rand.nextInt(16) + 8;
+		        (new WorldGenWoodlandLongGrass(Blocks.woodlandLongGrass.blockID, 200)).generate(worldObj, rand, j2, l3, j5);
+		   		}
+		  	}
+		
 		BlockSand.fallInstantly = false;
 	}
 	

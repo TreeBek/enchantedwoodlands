@@ -1,4 +1,4 @@
-package Mod.enchantedwoodlands.Blocks.LuminousForest;
+package Mod.enchantedwoodlands.Blocks;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 import net.minecraft.world.World;
 import net.minecraftforge.common.IShearable;
-public class BlockWoodlandLeaf extends BlockLeavesBase implements IShearable
+public class BlockExepditeLeaf extends BlockLeavesBase implements IShearable
 {
 	public static final String[] Fer_LEAF_TYPES = new String[] {"fer"};
 	public static final String[] LEAF_TYPES = new String[] {"fer"};
@@ -29,7 +29,7 @@ public class BlockWoodlandLeaf extends BlockLeavesBase implements IShearable
     private int field_94394_cP;
     private Icon[][] iconArray = new Icon[2][];
 
-    public BlockWoodlandLeaf(int par1, Material air,  boolean par3)
+    public BlockExepditeLeaf(int par1, Material air,  boolean par3)
     {
         super(par1, Material.leaves, false);
         this.setTickRandomly(true);
@@ -145,7 +145,8 @@ public class BlockWoodlandLeaf extends BlockLeavesBase implements IShearable
      */
     public int idDropped(int par1, Random par2Random, int par3)
     {
-        return Blocks.woodlandSapling.blockID;
+		return 0 ;
+       
     }
 
     /**

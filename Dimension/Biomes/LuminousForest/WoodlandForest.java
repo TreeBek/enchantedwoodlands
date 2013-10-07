@@ -9,6 +9,7 @@ import Mod.enchantedwoodlands.Dimension.Plants.LuminousForest.WorldGenExepditeTr
 import Mod.enchantedwoodlands.Dimension.Plants.LuminousForest.WorldGenTestForestTree;
 import Mod.enchantedwoodlands.Dimension.Plants.LuminousForest.WorldGenTestHugeTree;
 import Mod.enchantedwoodlands.Dimension.Plants.LuminousForest.WorldGenTestTree;
+import Mod.enchantedwoodlands.Dimension.Plants.LuminousForest.WorldGenWoodlandLongGrass;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -24,6 +25,7 @@ import net.minecraft.world.gen.feature.WorldGenFlowers;
 import net.minecraft.world.gen.feature.WorldGenHugeTrees;
 import net.minecraft.world.gen.feature.WorldGenShrub;
 import net.minecraft.world.gen.feature.WorldGenSwamp;
+import net.minecraft.world.gen.feature.WorldGenTallGrass;
 import net.minecraft.world.gen.feature.WorldGenTrees;
 import net.minecraft.world.gen.feature.WorldGenVines;
 import net.minecraft.world.gen.feature.WorldGenerator;
@@ -36,6 +38,7 @@ private WorldGenerator WorldGenTestTrees;
 private WorldGenerator WorldGenTestForestTrees;
 private WorldGenerator WorldGenTestHugeTrees;
 private WorldGenerator WorldGenExepditeTree;
+private WorldGenerator WorldGenWoodlandLongGrass;
 public WoodlandForest(int par1)
 {
 super(par1);
@@ -47,14 +50,16 @@ this.spawnableMonsterList.clear();
 this.spawnableMonsterList.add(new SpawnListEntry(EntityCreeper.class, 1, 500, 1000));
 this.spawnableCreatureList.clear();
 this.spawnableWaterCreatureList.clear();
+this.theBiomeDecorator.grassPerChunk = 400;
 this.worldGeneratorSwamp = new WorldGenSwamp();
-this.theBiomeDecorator.treesPerChunk = 65;
+this.theBiomeDecorator.treesPerChunk = 80;
 this.topBlock = ((byte)Blocks.starDustGrass.blockID);
 this.fillerBlock = ((byte)Block.dirt.blockID);
 this.WorldGenTestTrees = new WorldGenTestTree(false);
 this.WorldGenTestForestTrees = new WorldGenTestForestTree(false);
 this.WorldGenExepditeTree = new WorldGenExepditeTree(false);
-this.WorldGenTestHugeTrees = new WorldGenTestHugeTree(false, 8, Blocks.woodlandLog.blockID, Blocks.woodlandLeaf.blockID);
+this.WorldGenWoodlandLongGrass = new WorldGenWoodlandLongGrass(Blocks.woodlandLongGrass.blockID, 0);
+//this.WorldGenTestHugeTrees = new WorldGenTestHugeTree(false, 8, Blocks.woodlandLog.blockID, Blocks.woodlandLeaf.blockID);
 this.setBiomeName("Woodland Forest");
 
 
@@ -65,4 +70,5 @@ public WorldGenerator getRandomWorldGenForTrees(Random par1Random)
 {
 return (WorldGenerator)(par1Random.nextInt(5) == 0 ? this.worldGeneratorForest : (par1Random.nextInt(80) == 0 ? this.WorldGenTestTrees : this.worldGeneratorTrees));
 }
+
 }

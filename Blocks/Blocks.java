@@ -12,6 +12,7 @@ import Mod.enchantedwoodlands.Blocks.LuminousForest.BlockTier1KeyCrystal;
 import Mod.enchantedwoodlands.Blocks.LuminousForest.BlockWoodlandGrass;
 import Mod.enchantedwoodlands.Blocks.LuminousForest.BlockWoodlandLeaf;
 import Mod.enchantedwoodlands.Blocks.LuminousForest.BlockWoodlandLog;
+import Mod.enchantedwoodlands.Blocks.LuminousForest.BlockWoodlandLongGrass;
 import Mod.enchantedwoodlands.Blocks.LuminousForest.BlockWoodlandSapling;
 import Mod.enchantedwoodlands.Blocks.LuminousForest.Blocktier1LockedDoorBlock;
 import Mod.enchantedwoodlands.Common.Common;
@@ -26,12 +27,12 @@ public class Blocks {
 	public static Block starDustGrass;
 	public static Block mythicalStone;
 	public static final Block starDustFlower = new BlockStarDustFlower(Common.starDustFlowerID).setUnlocalizedName("starDustFlower");
-	public static final Block woodlandLog = new BlockWoodlandLog(Common.starDustLogID).setHardness(2.3F).setUnlocalizedName("woodlandLog");
-	public static final Block woodlandLeaf = new BlockWoodlandLeaf(Common.starDustLeafID).setUnlocalizedName("woodlandLeaf");
+	public static final Block woodlandLog = new BlockWoodlandLog(Common.starDustLogID, Material.wood).setHardness(2.3F).setUnlocalizedName("woodlandLog");
+	public static final Block woodlandLeaf = new BlockWoodlandLeaf(Common.starDustLeafID, Material.leaves, true).setHardness(0.5f).setUnlocalizedName("woodlandLeaf");
 	public static final Block woodlandSapling = new BlockWoodlandSapling(Common.starDustSaplingID, 0).setUnlocalizedName("starDustSapling");
 	public static Block woodlandGrass; 
 	public static Block exepditeLog;
-	public static final Block exepditeLeaf = new BlockWoodlandLeaf(Common.exepditeLeafID).setUnlocalizedName("exepditeLeaf");
+	public static final Block exepditeLeaf = new BlockExepditeLeaf(Common.exepditeLeafID, Material.leaves, true).setHardness(0.5f).setUnlocalizedName("exepditeLeaf");
 	public static Block swiftnessFruit;
 	public static Block woodlandBench;
 	public static Block woodlandPlank;
@@ -41,6 +42,7 @@ public class Blocks {
 	public static Block lockedDoorBlock;
 	public static Block tier1LockedDoorBlock;
 	public static Block tier1Enchanter;
+	public static Block woodlandLongGrass;
 	
 	public static void Init(){
 	{
@@ -61,7 +63,7 @@ public class Blocks {
 					GameRegistry.registerBlock(mythicalStone, Common.modid + mythicalStone.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(mythicalStone, "Mythical Stone");
 						
-				exepditeLog = new BlockWoodlandLog(Common.exepditeLogID).setHardness(2.0F).setUnlocalizedName("exepditeLog");
+				exepditeLog = new BlockWoodlandLog(Common.exepditeLogID, Material.wood).setHardness(2.0F).setUnlocalizedName("exepditeLog");
 					GameRegistry.registerBlock(exepditeLog, Common.modid + exepditeLog.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(exepditeLog, "Exepdite Log");
 						
@@ -105,6 +107,10 @@ public class Blocks {
 				starDustGrass = new BlockStarDustGrass(Common.starDustGrassID).setHardness(0.6F).setUnlocalizedName("starDustGrass");
 					GameRegistry.registerBlock(starDustGrass, Common.modid + starDustGrass.getUnlocalizedName().substring(5));	
 						LanguageRegistry.addName(starDustGrass, "StarDust Grass");
+						
+				woodlandLongGrass = new BlockWoodlandLongGrass(Common.woodlandLongGrassID).setHardness(0.0F).setUnlocalizedName("woodlandLongGrass");
+					GameRegistry.registerBlock(woodlandLongGrass, Common.modid + woodlandLongGrass.getUnlocalizedName().substring(5));	
+						LanguageRegistry.addName(woodlandLongGrass, "Woodland LongGrass");
 					
 		//Adding the Blocks
 				GameRegistry.registerBlock(woodlandLog, Common.modid + woodlandLog.getUnlocalizedName().substring(5));
@@ -114,11 +120,12 @@ public class Blocks {
 				GameRegistry.registerBlock(exepditeLeaf, Common.modid + exepditeLeaf.getUnlocalizedName().substring(5));
 				
 		//Block Name
-				LanguageRegistry.addName(woodlandLog, "StarDust Log");
-				LanguageRegistry.addName(woodlandLeaf, "StarDust Leaf");
-				LanguageRegistry.addName(woodlandSapling, "StarDust Sapling");
+				LanguageRegistry.addName(woodlandLog, "Woodland Log");
+				LanguageRegistry.addName(woodlandLeaf, "Woodland Leaves");
+				LanguageRegistry.addName(woodlandSapling, "Woodland Sapling");
 				LanguageRegistry.addName(starDustFlower, "StarDust Flower");
 				LanguageRegistry.addName(exepditeLog, "Exepdite Log");
+				LanguageRegistry.addName(exepditeLeaf, "Exepdite Leaves");
 		
 	
 		}

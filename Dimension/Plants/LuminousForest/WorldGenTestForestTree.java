@@ -93,7 +93,7 @@ public class WorldGenTestForestTree extends WorldGenerator
 							{
 								int l2 = k2 - par5;
 
-								if (Math.abs(j2) != k1 || Math.abs(l2) != k1 || par2Random.nextInt(2) != 0 && j1 != 0)
+								if (Math.abs(j2) != k1 || Math.abs(l2) != k1 || par2Random.nextInt(3) != 0 && j1 != 0)
 								{
 									int i3 = par1World.getBlockId(l1, i2, k2);
 									Block block = Block.blocksList[i3];

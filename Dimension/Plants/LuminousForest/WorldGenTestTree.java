@@ -115,7 +115,7 @@ public class WorldGenTestTree extends WorldGenerator implements IWorldGenerator
 							for (int l2 = par5 - i2; l2 <= par5 + i2; ++l2)
 							{
 								int i3 = l2 - par5;
-								if (Math.abs(k2) != i2 || Math.abs(i3) != i2 || par2Random.nextInt(2) != 0 && k1 != 0)
+								if (Math.abs(k2) != i2 || Math.abs(i3) != i2 || par2Random.nextInt(18) != 0 && k1 != 0)
 								{
 									int j3 = par1World.getBlockId(j2, j1, l2);
 									Block block = Block.blocksList[j3];

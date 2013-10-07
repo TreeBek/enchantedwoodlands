@@ -17,94 +17,121 @@ import net.minecraft.util.Icon;
 import net.minecraft.world.World;
 public class BlockWoodlandLog extends Block
 {
-public static final String[] woodType = new String[] {"Tutorial"};
-@SideOnly(Side.CLIENT)
-private Icon iconLogTop;
-@SideOnly(Side.CLIENT)
-private Icon iconLogBottom;
-
-public BlockWoodlandLog(int par1)
-{
-super(par1, Material.wood);
-this.setCreativeTab(Common.EnchWoodRPGTab);
-this.setStepSound(soundWoodFootstep);
-}
-
-
-/**
-* Called when a block is placed using its ItemBlock. Args: World, X, Y, Z, side, hitX, hitY, hitZ, block metadata
-*/
-public int onBlockPlaced(World par1World, int par2, int par3, int par4, int par5, float par6, float par7, float par8, int par9)
-{
-int j1 = par9 & 3;
-byte b0 = 0;
-switch (par5)
-{
-case 0:
-case 1:
-b0 = 0;
-break;
-case 2:
-case 3:
-b0 = 8;
-break;
-case 4:
-case 5:
-b0 = 4;
-}
-return j1 | b0;
-}
-
-/**
-* Returns the ID of the items to drop on destruction.
-*/
-public int idDropped(int par1, Random par2Random, int par3)
-{
-return this.blockID;
-}
-/**
-* Returns the quantity of items to drop on block destruction.
-*/
-public int quantityDropped(Random par1Random)
-{
-return 1;
-}
-
-/** gets the icon **/
-public Icon getIcon(int par1, int par2)
-{
-return par1 == 1 ? this.iconLogTop : (par1 == 0 ? this.iconLogBottom : this.blockIcon);
-}
-
-@SideOnly(Side.CLIENT)
-/** Register Icons for this block used in method above **/
-public void registerIcons(IconRegister par1IconRegister)
-{
-/** change the "Tutorial:LogSide,LogTop to your texture names **/
-this.blockIcon = par1IconRegister.registerIcon(Common.modid + ":" + this.getUnlocalizedName().substring(5) + "_side");
-this.iconLogTop = par1IconRegister.registerIcon(Common.modid + ":" + this.getUnlocalizedName().substring(5) + "_top");
-this.iconLogBottom = par1IconRegister.registerIcon(Common.modid + ":" + this.getUnlocalizedName().substring(5) + "_top");
-}
-
-@Override
-public boolean canSustainLeaves(World world, int x, int y, int z)
-{
-return true;
-}
+    /** The type of tree this block came from. */
+	public static final String[] Fer_woodType = new String[] {"fer"};
+    public static final String[] woodType = new String[] {"fer"};
+    
+    @SideOnly(Side.CLIENT)
+    public BlockWoodlandLog(int par1, Material mat)
+    {
+        super(par1, mat);
+        this.setCreativeTab(Common.EnchWoodRPGTab);
+        this.setStepSound(soundWoodFootstep);
+    }
 
 
-@Override
-public boolean isWood(World world, int x, int y, int z)
-{
-return true;
-}
 
-@SideOnly(Side.CLIENT)
-/**
-* returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
-*/
-public void getSubBlocks(int par1, CreativeTabs par2CreativeTabs, List par3List)
-{
-par3List.add(new ItemStack(par1, 1, 0));
-}
+        public boolean canSustainLeaves(World world, int x, int y, int z)
+        {
+            return true;
+        }
+    @Override
+        public boolean isWood(World world, int x, int y, int z)
+        {
+            return true;
+        }
+    
+    @SideOnly(Side.CLIENT)
+
+    /**
+     * From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
+     */
+    public Icon getIcon(int side, int par2)
+    {
+       if(side == 0){
+            return bottom;
+        }
+        if(side == 1){
+            return top;
+        }
+        if(side == 2){
+            return side1;
+        }
+        if(side == 3){
+            return side2;
+        }
+        if(side == 4){
+            return side3;
+        }
+        if(side == 5){
+            return side4;
+        }
+        else{
+            return side2;
+        }
+    }
+
+    /**
+     * Determines the damage on the item the block drops. Used in cloth and wood.
+     */
+    public int damageDropped(int par1)
+    {
+        return par1;
+    }
+
+    @SideOnly(Side.CLIENT)
+
+    /**
+     * returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
+     */
+    public void getSubBlocks(int par1, CreativeTabs par2CreativeTabs, List par3List)
+    {
+        par3List.add(new ItemStack(par1, 1, 0));
+       
+    }
+
+    private Icon top, bottom, side1, side2, side3, side4;
+    private Icon [][] iconBuffer;
+    
+    @SideOnly(Side.CLIENT)
+
+    /**
+     * When this method is called, your block should register all the icons it needs with the given IconRegister. This
+     * is the only chance you get to register icons.
+     */ 
+    public void registerIcons(IconRegister iconRegister) {
+        this.blockIcon = iconRegister.registerIcon(Common.modid + ":" + this.getUnlocalizedName().substring(5) + "_side");
+        this.top = iconRegister.registerIcon(Common.modid + ":" + this.getUnlocalizedName().substring(5) + "_top");
+        this.bottom = iconRegister.registerIcon(Common.modid + ":" + this.getUnlocalizedName().substring(5) + "_top");
+        this.side1 = iconRegister.registerIcon(Common.modid + ":" + this.getUnlocalizedName().substring(5) + "_side");
+        this.side2 = iconRegister.registerIcon(Common.modid + ":" + this.getUnlocalizedName().substring(5) + "_side");
+        this.side3 = iconRegister.registerIcon(Common.modid + ":" + this.getUnlocalizedName().substring(5) + "_side");
+        this.side4 = iconRegister.registerIcon(Common.modid + ":" + this.getUnlocalizedName().substring(5) + "_side");
+        
+    }
+    
+    public Icon getBlockTextureFromSideAndMetadata(int side, int meta){
+        if(side == 0){
+            return bottom;
+        }
+        if(side == 1){
+            return top;
+        }
+        if(side == 2){
+            return side1;
+        }
+        if(side == 3){
+            return side2;
+        }
+        if(side == 4){
+            return side3;
+        }
+        if(side == 5){
+            return side4;
+        }
+        else{
+            return side2;
+        }
+        
+    }
 }

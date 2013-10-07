@@ -78,6 +78,7 @@ private static GuiHandlerEnchantedWoodlands guiHandlerEnchantedWoodlands = new G
 	public static int tier1KeyBlockID;
 	public static int tier1LockedDoorBlockID;
 	public static int tier1EnchanterID;
+	public static int woodlandLongGrassID;
 	
 //Item ID
 	public static int woodlandLighterID;
@@ -110,6 +111,8 @@ private static GuiHandlerEnchantedWoodlands guiHandlerEnchantedWoodlands = new G
      tier1KeyBlockID = config.get(Configuration.CATEGORY_BLOCK, "Tier1 KeyBlock", 4016).getInt();
      tier1EnchanterID = config.get(Configuration.CATEGORY_BLOCK, "Tier1 Enchanter", 4019).getInt();
      tier1LockedDoorBlockID = config.get("AVOID CHANGING", "Tier1 LockedDoor", 4017,"But if you do make sure there is always an ID open one above this one's!").getInt();
+     woodlandLongGrassID = config.get(Configuration.CATEGORY_BLOCK, "Woodland LongGrass", 4020).getInt();
+     
      //Items
      woodlandLighterID = config.get(Configuration.CATEGORY_ITEM, "Woodland Lighter", 7000).getInt();
      mythicalPortalPlacerID = config.get(Configuration.CATEGORY_ITEM, "Mythical PortalPlacer", 7001).getInt();
