@@ -43,6 +43,7 @@ public class Blocks {
 	public static Block tier1LockedDoorBlock;
 	public static Block tier1Enchanter;
 	public static Block woodlandLongGrass;
+	public static Block warmingGrass;
 	
 	public static void Init(){
 	{
@@ -111,6 +112,10 @@ public class Blocks {
 				woodlandLongGrass = new BlockWoodlandLongGrass(Common.woodlandLongGrassID).setHardness(0.0F).setUnlocalizedName("woodlandLongGrass");
 					GameRegistry.registerBlock(woodlandLongGrass, Common.modid + woodlandLongGrass.getUnlocalizedName().substring(5));	
 						LanguageRegistry.addName(woodlandLongGrass, "Woodland LongGrass");
+						
+				warmingGrass = new BlockWoodlandGrass(Common.warmingGrassID).setHardness(0.7F).setUnlocalizedName("warmingGrass");
+					GameRegistry.registerBlock(warmingGrass, Common.modid + warmingGrass.getUnlocalizedName().substring(5));
+						LanguageRegistry.addName(warmingGrass, "Warming Grass");
 					
 		//Adding the Blocks
 				GameRegistry.registerBlock(woodlandLog, Common.modid + woodlandLog.getUnlocalizedName().substring(5));

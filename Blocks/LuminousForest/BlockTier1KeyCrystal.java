@@ -25,7 +25,7 @@ public class BlockTier1KeyCrystal extends BlockContainer {
 public BlockTier1KeyCrystal(int id, int texture, Material material) {
 super(id, material);
 this.setCreativeTab(Common.EnchWoodRPGTab);
-this.setBlockBounds(0.25F, 0.1F, 0.3F, 0.75F, 0.4F, 0.8F);
+this.setBlockBounds(0.2F, 0.0F, 0.4F, 0.8F, 0.1F, 0.6F);
 }
 
 public int idDropped(int par1, Random par2Random, int par3)

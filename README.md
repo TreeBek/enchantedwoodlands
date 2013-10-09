@@ -5,7 +5,6 @@ Mod by gruntpie224 and treebek
 
 TODO:
 ==================
-*Change Flower Texture<br>
 *Create Different Trees <br>
 *Add any missing textures <br>
 *Finish Tier I Dungeon <br>

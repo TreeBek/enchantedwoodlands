@@ -1,6 +1,5 @@
 package Mod.enchantedwoodlands.Dimension.Biomes.LuminousForest;
 
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -34,7 +33,7 @@ import net.minecraft.world.gen.feature.WorldGenTrees;
 import net.minecraft.world.gen.feature.WorldGenVines;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
-public class StarDustFields extends BiomeGenBase
+public class WarmingHills extends BiomeGenBase
 {
 private WorldGenerator WorldGenTestTrees;
 private WorldGenerator UnDeadworldGeneratorBigTree;
@@ -42,7 +41,7 @@ public final Material blockMaterial;
 private WorldGenerator WorldGenExepditeTrees;
 private WorldGenerator WorldGenWoodlandLongGrass;
 
-public StarDustFields(int par1)
+public WarmingHills(int par1)
 {
 	
 	
@@ -53,29 +52,17 @@ this.maxHeight = 0.6F;
 
 this.rainfall = 100.0f;
 this.spawnableMonsterList.clear();
-this.spawnableMonsterList.add(new SpawnListEntry(EntityCreeper.class, 1, 500, 1000));
 this.spawnableCreatureList.clear();
 this.spawnableWaterCreatureList.clear();
 this.theBiomeDecorator.grassPerChunk = 400;
-this.worldGeneratorSwamp = new WorldGenSwamp();
 this.theBiomeDecorator.treesPerChunk = 1;
-this.topBlock = ((byte)Blocks.woodlandGrass.blockID);
+this.topBlock = ((byte)Blocks.warmingGrass.blockID);
 this.fillerBlock = ((byte)Block.dirt.blockID);
-this.WorldGenExepditeTrees = new WorldGenExepditeTree(false);
-this.WorldGenWoodlandLongGrass = new WorldGenWoodlandLongGrass(Blocks.woodlandLongGrass.blockID, 0);
-this.setBiomeName("Woodland Forest");
+this.setBiomeName("Warming Hills");
 
 
 /** this changes the water colour, its set to red now but google the java colours **/
-this.waterColorMultiplier = 0x00D1FF;}
-@Override
-public WorldGenerator getRandomWorldGenForGrass(Random par1Random)
-{
-	return (WorldGenerator)(par1Random.nextInt(800) == 0 ? this.worldGeneratorForest : (par1Random.nextInt(800) == 0 ? this.WorldGenWoodlandLongGrass : this.worldGeneratorTrees));
-}
-public WorldGenerator getRandomWorldGenForTrees(Random par1Random)
-{
-return (WorldGenerator)(par1Random.nextInt(5) == 0 ? this.worldGeneratorForest : (par1Random.nextInt(80) == 0 ? this.WorldGenTestTrees : this.worldGeneratorTrees));
-}
+this.waterColorMultiplier = 0xDF3A01;}
 
 }
+

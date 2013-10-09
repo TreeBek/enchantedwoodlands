@@ -12,7 +12,7 @@ import net.minecraft.world.gen.layer.IntCache;
 
 public class LuminousGenLayerBiomesBiomes extends GenLayer {
 
-protected BiomeGenBase[] allowedBiomes = {Dimensions.StarDustFields, Dimensions.WoodlandForest};
+protected BiomeGenBase[] allowedBiomes = {Dimensions.StarDustFields, Dimensions.WoodlandForest, Dimensions.WarmingHills};
 
 public LuminousGenLayerBiomesBiomes(long seed, GenLayer genlayer) {
 super(seed);

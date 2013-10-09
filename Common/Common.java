@@ -79,6 +79,7 @@ private static GuiHandlerEnchantedWoodlands guiHandlerEnchantedWoodlands = new G
 	public static int tier1LockedDoorBlockID;
 	public static int tier1EnchanterID;
 	public static int woodlandLongGrassID;
+	public static int warmingGrassID;
 	
 //Item ID
 	public static int woodlandLighterID;
@@ -100,7 +101,7 @@ private static GuiHandlerEnchantedWoodlands guiHandlerEnchantedWoodlands = new G
      starDustLogID = config.get(Configuration.CATEGORY_BLOCK, "StarDust Log", 4005).getInt();
      starDustLeafID = config.get(Configuration.CATEGORY_BLOCK, "StarDust Leaves", 4006).getInt();
      starDustSaplingID = config.get(Configuration.CATEGORY_BLOCK, "StarDust Sapling", 4007).getInt();
-     woodlandGrassID = config.getTerrainBlock("Enchanted Woodlands Generation", "Woodline Grass", 201,null).getInt();
+     woodlandGrassID = config.getTerrainBlock("Enchanted Woodlands Generation", "Woodland Grass", 201,null).getInt();
      exepditeLogID = config.get(Configuration.CATEGORY_BLOCK, "Exepdite Log", 4009).getInt();
      exepditeLeafID = config.get(Configuration.CATEGORY_BLOCK, "Exepdite Leaves", 4010).getInt();
      swiftnessFruitBlockID = config.get(Configuration.CATEGORY_BLOCK, "Swiftness FruitBlock", 4011).getInt();
@@ -112,6 +113,7 @@ private static GuiHandlerEnchantedWoodlands guiHandlerEnchantedWoodlands = new G
      tier1EnchanterID = config.get(Configuration.CATEGORY_BLOCK, "Tier1 Enchanter", 4019).getInt();
      tier1LockedDoorBlockID = config.get("AVOID CHANGING", "Tier1 LockedDoor", 4017,"But if you do make sure there is always an ID open one above this one's!").getInt();
      woodlandLongGrassID = config.get(Configuration.CATEGORY_BLOCK, "Woodland LongGrass", 4020).getInt();
+     warmingGrassID = config.getTerrainBlock("Enchanted Woodlands Generation", "Warming Grass", 202,null).getInt();
      
      //Items
      woodlandLighterID = config.get(Configuration.CATEGORY_ITEM, "Woodland Lighter", 7000).getInt();

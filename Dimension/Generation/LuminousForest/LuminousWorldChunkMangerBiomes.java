@@ -31,6 +31,7 @@ this.myBiomeCache = new BiomeCache(this);
 this.myBiomesToSpawnIn = new ArrayList<BiomeGenBase>();
 this.myBiomesToSpawnIn.add(Dimensions.WoodlandForest);
 this.myBiomesToSpawnIn.add(Dimensions.StarDustFields);
+this.myBiomesToSpawnIn.add(Dimensions.WarmingHills);
 }
 
 public LuminousWorldChunkMangerBiomes(long seed, WorldType worldtype)

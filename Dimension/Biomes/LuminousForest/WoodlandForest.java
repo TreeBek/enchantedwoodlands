@@ -60,7 +60,7 @@ this.WorldGenTestForestTrees = new WorldGenTestForestTree(false);
 this.WorldGenExepditeTree = new WorldGenExepditeTree(false);
 this.WorldGenWoodlandLongGrass = new WorldGenWoodlandLongGrass(Blocks.woodlandLongGrass.blockID, 0);
 //this.WorldGenTestHugeTrees = new WorldGenTestHugeTree(false, 8, Blocks.woodlandLog.blockID, Blocks.woodlandLeaf.blockID);
-this.setBiomeName("Woodland Forest");
+this.setBiomeName("StarDust Fields");
 
 
 /** this changes the water colour, its set to red now but google the java colours **/

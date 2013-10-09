@@ -15,6 +15,7 @@ public class Dimensions {
 	/** Biome's **/
 	public static final BiomeGenBase WoodlandForest = new Mod.enchantedwoodlands.Dimension.Biomes.LuminousForest.WoodlandForest(25);
 	public static final BiomeGenBase StarDustFields = new Mod.enchantedwoodlands.Dimension.Biomes.LuminousForest.StarDustFields(26);
+	public static final BiomeGenBase WarmingHills = new Mod.enchantedwoodlands.Dimension.Biomes.LuminousForest.WarmingHills(27);
 	
 	public static void Init(){
 		

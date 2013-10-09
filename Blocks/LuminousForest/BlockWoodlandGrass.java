@@ -25,13 +25,17 @@ private Icon iconGrassBottom;
 @SideOnly(Side.CLIENT)
 private static Icon iconGrassSideOverlay;
 
+
+
 public BlockWoodlandGrass(int par1)
 {
 super(par1, Material.grass);
 this.setTickRandomly(true);
 this.setCreativeTab(Common.EnchWoodRPGTab);
 this.setStepSound(soundGrassFootstep);
+int blockID = par1;
 }
+
 
 @SideOnly(Side.CLIENT)
 
@@ -65,7 +69,7 @@ int l1 = par1World.getBlockId(i1, j1 + 1, k1);
 
 if (par1World.getBlockId(i1, j1, k1) == Block.dirt.blockID && par1World.getBlockLightValue(i1, j1 + 1, k1) >= 4 && par1World.getBlockLightOpacity(i1, j1 + 1, k1) <= 2)
 {
-par1World.setBlock(i1, j1, k1, Blocks.woodlandGrass.blockID);
+par1World.setBlock(i1, j1, k1, blockID);
 }
 }
 }
@@ -116,10 +120,10 @@ this.iconGrassTop = par1IconRegister.registerIcon(Common.modid + ":" + this.getU
 this.iconGrassBottom = par1IconRegister.registerIcon("EnchantedWoodlands:dirt_bottom");
 this.iconGrassSideOverlay = par1IconRegister.registerIcon(Common.modid + ":" + this.getUnlocalizedName().substring(5) + "_side_overlay");
 
-this.blockIcon = par1IconRegister.registerIcon("EnchantedWoodlands:woodlandGrass_side");
-this.iconGrassTop = par1IconRegister.registerIcon("EnchantedWoodlands:woodlandGrass_top");
+this.blockIcon = par1IconRegister.registerIcon(Common.modid + ":" + this.getUnlocalizedName().substring(5) + "_side");
+this.iconGrassTop = par1IconRegister.registerIcon(Common.modid + ":" + this.getUnlocalizedName().substring(5) + "_top");
 this.iconGrassBottom = par1IconRegister.registerIcon("EnchantedWoodlands:dirt_bottom");
-this.iconGrassSideOverlay = par1IconRegister.registerIcon("EnchantedWoodlands:woodlandGrass_side_overlay");
+this.iconGrassSideOverlay = par1IconRegister.registerIcon(Common.modid + ":" + this.getUnlocalizedName().substring(5) + "_side_overlay");
 
 }
 
