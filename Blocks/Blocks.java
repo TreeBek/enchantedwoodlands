@@ -1,7 +1,9 @@
 package Mod.enchantedwoodlands.Blocks;
 
+import vanillaplus.ItemRubyBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.item.ItemStack;
 import Mod.enchantedwoodlands.Blocks.LuminousForest.BlockLuminousPortal;
 import Mod.enchantedwoodlands.Blocks.LuminousForest.BlockRedCrystal;
 import Mod.enchantedwoodlands.Blocks.LuminousForest.BlockStarDustFlower;
@@ -76,9 +78,8 @@ public class Blocks {
 					GameRegistry.registerBlock(woodlandBench, Common.modid + woodlandBench.getUnlocalizedName().substring(5));
 						LanguageRegistry.addName(woodlandBench, "Woodland Bench");
 						
-				woodlandPlank = new BlockBaseBlock(Common.woodlandPlankID, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.0F).setUnlocalizedName("bench_bottom");
-					GameRegistry.registerBlock(woodlandPlank, Common.modid + woodlandPlank.getUnlocalizedName().substring(5));
-						LanguageRegistry.addName(woodlandPlank, "Woodland Plank");
+				woodlandPlank = new BlockPlankBlock(Common.woodlandPlankID, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.0F).setUnlocalizedName("plank");
+			
 						
 				redCrystal = new BlockRedCrystal(Common.redCrystalID, 1, Material.glass).setStepSound(Block.soundGlassFootstep).setHardness(5.0F).setUnlocalizedName("redCrystalParticles");
 					GameRegistry.registerBlock(redCrystal, Common.modid + redCrystal.getUnlocalizedName().substring(5));
@@ -123,6 +124,8 @@ public class Blocks {
 				GameRegistry.registerBlock(woodlandSapling, Common.modid + woodlandSapling.getUnlocalizedName().substring(5));
 				GameRegistry.registerBlock(starDustFlower, Common.modid + starDustFlower.getUnlocalizedName().substring(5));
 				GameRegistry.registerBlock(exepditeLeaf, Common.modid + exepditeLeaf.getUnlocalizedName().substring(5));
+				GameRegistry.registerBlock(woodlandPlank, ItemPlankBlock.class, Common.modid + (woodlandPlank.getUnlocalizedName().substring(5)));
+
 				
 		//Block Name
 				LanguageRegistry.addName(woodlandLog, "Woodland Log");
@@ -131,6 +134,8 @@ public class Blocks {
 				LanguageRegistry.addName(starDustFlower, "StarDust Flower");
 				LanguageRegistry.addName(exepditeLog, "Exepdite Log");
 				LanguageRegistry.addName(exepditeLeaf, "Exepdite Leaves");
+				LanguageRegistry.addName(new ItemStack(woodlandPlank, 1, 0), "Woodland Plank");
+		        LanguageRegistry.addName(new ItemStack(woodlandPlank, 1, 1), "Expedite Plank");
 		
 	
 		}
