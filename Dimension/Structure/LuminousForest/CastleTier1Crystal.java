@@ -4449,7 +4449,7 @@ public class CastleTier1Crystal extends WorldGenerator
 		world.setBlock(i + 14, j + 7, k + 6, 0);
 		world.setBlock(i + 14, j + 7, k + 7, 0);
 		world.setBlock(i + 14, j + 7, k + 8, Block.cobblestone.blockID);
-		world.setBlock(i + 14, j + 7, k + 9, Blocks.redCrystal.blockID);
+		world.setBlock(i + 14, j + 7, k + 9, Blocks.tier1KeyBlock.blockID);
 		world.setBlock(i + 14, j + 7, k + 10, 0);
 		world.setBlock(i + 14, j + 7, k + 11, 0);
 		world.setBlock(i + 14, j + 7, k + 12, 0);

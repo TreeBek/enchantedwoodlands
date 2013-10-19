@@ -38,7 +38,7 @@ public class ItemSwiftFruit extends ItemFood
     public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
     {
         par3List.add("\u00a7eFills 1.5 Hunger");
-        par3List.add("\u00a7b10 Second Speed Boost");
+        par3List.add("\u00a7b5 Second Speed Boost");
     }
     
     @SideOnly(Side.CLIENT)

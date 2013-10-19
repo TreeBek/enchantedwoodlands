@@ -39,7 +39,7 @@ public void registerIcons(IconRegister par1IconRegister)
 this.blockIcon = par1IconRegister.registerIcon("EnchantedWoodlands:bench_side");
 this.workbenchIconTop = par1IconRegister.registerIcon("EnchantedWoodlands:bench_top");
 this.workbenchIconFront = par1IconRegister.registerIcon("EnchantedWoodlands:bench_side");
-this.workbenchIconBottom = par1IconRegister.registerIcon("EnchantedWoodlands:bench_bottom");
+this.workbenchIconBottom = par1IconRegister.registerIcon("EnchantedWoodlands:plank0");
 }
 
 public boolean onBlockActivated(World var1, int var2, int var3, int var4, EntityPlayer player, int var6, float var7, float var8, float var9)

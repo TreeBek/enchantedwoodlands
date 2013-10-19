@@ -27,6 +27,7 @@ public class BlockWoodlandSapling extends BlockFlower
 		float var3 = 0.4F;
 		this.setBlockBounds(0.5F - var3, 0.0F, 0.5F - var3, 0.5F + var3, var3 * 2.0F, 0.5F + var3);
 		this.setCreativeTab(Common.EnchWoodRPGTab);
+		this.setStepSound(Block.soundGrassFootstep);
 	}
 
 	@Override
@@ -158,6 +159,6 @@ public class BlockWoodlandSapling extends BlockFlower
 	protected boolean canThisPlantGrowOnThisBlockID(int par1)
 	{
 		/** Change this to your custom grass **/
-		return par1 == Blocks.woodlandGrass.blockID || par1 == Block.dirt.blockID || par1 == Blocks.starDustGrass.blockID;
+		return par1 == Blocks.woodlandGrass.blockID;
 	}
 }

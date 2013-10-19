@@ -2,8 +2,11 @@ package Mod.enchantedwoodlands.Items;
 
 import java.util.Random;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import Mod.enchantedwoodlands.Blocks.Blocks;
 import Mod.enchantedwoodlands.Common.Common;
+import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -57,5 +60,11 @@ par3World.setBlock(par4, par5, par6, Blocks.woodlandFire.blockID);
 }
 par1ItemStack.damageItem(1, par2EntityPlayer);
 return true;
+}
+@SideOnly(Side.CLIENT)
+public void registerIcons(IconRegister par1IconRegister)
+{
+    this.itemIcon = par1IconRegister.registerIcon(Common.modid + ":" + this.getUnlocalizedName().substring(5));
+
 }
 }

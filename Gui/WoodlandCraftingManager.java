@@ -6,6 +6,8 @@ import java.util.HashMap;
 import java.util.List;
 
 import Mod.enchantedwoodlands.Blocks.Blocks;
+import Mod.enchantedwoodlands.Common.Common;
+import Mod.enchantedwoodlands.Config.MainConfig;
 import Mod.enchantedwoodlands.Items.Items;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
@@ -29,12 +31,15 @@ public static final WoodlandCraftingManager getInstance()
 private WoodlandCraftingManager()
 {
 	recipes = new ArrayList();
-	this.func_92051_a(new ItemStack(Items.teleWand), new Object[] {
-		" R ", 
-		" R ", 
-		"RRR", 
-		" R ", 
-		" R ", 'R', Item.redstone});
+	
+	ItemStack expPlank = new ItemStack(MainConfig.woodlandPlankID, 1, 1);
+	
+	this.func_92051_a(new ItemStack(Items.mythicalStick, 3), new Object[] {
+		"    R", 
+		"   R ", 
+		"  R  ", 
+		" R   ", 
+		"R    ", 'R', expPlank});
 	
 	this.func_92051_a(new ItemStack(Blocks.woodlandBench), new Object[] {"##", "##", '#', Blocks.woodlandPlank});
 		
