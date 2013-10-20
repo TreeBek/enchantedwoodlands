@@ -2,15 +2,15 @@ package Mod.enchantedwoodlands.Proxy;
 
 import net.minecraftforge.client.MinecraftForgeClient;
 import Mod.enchantedwoodlands.Blocks.Blocks;
-import Mod.enchantedwoodlands.Render.TileEntityRedCrystalRenderer;
-import Mod.enchantedwoodlands.Render.TileEntityTier1EnchanterRenderer;
-import Mod.enchantedwoodlands.Render.TileEntityTier1KeyRenderer;
-import Mod.enchantedwoodlands.Render.Renderer.ItemRedCrystalRenderer;
-import Mod.enchantedwoodlands.Render.Renderer.ItemTier1EnchanterRenderer;
-import Mod.enchantedwoodlands.Render.Renderer.ItemTier1KeyRenderer;
-import Mod.enchantedwoodlands.Render.TitleEntity.TileEntityRedCrystal;
-import Mod.enchantedwoodlands.Render.TitleEntity.TileEntityTier1Enchanter;
-import Mod.enchantedwoodlands.Render.TitleEntity.TileEntityTier1Key;
+import Mod.enchantedwoodlands.Client.TileEntityRedCrystalRenderer;
+import Mod.enchantedwoodlands.Client.TileEntityTier1EnchanterRenderer;
+import Mod.enchantedwoodlands.Client.TileEntityTier1KeyRenderer;
+import Mod.enchantedwoodlands.Client.ItemRender.ItemRedCrystalRenderer;
+import Mod.enchantedwoodlands.Client.ItemRender.ItemTier1EnchanterRenderer;
+import Mod.enchantedwoodlands.Client.ItemRender.ItemTier1KeyRenderer;
+import Mod.enchantedwoodlands.Client.TitleEntity.TileEntityRedCrystal;
+import Mod.enchantedwoodlands.Client.TitleEntity.TileEntityTier1Enchanter;
+import Mod.enchantedwoodlands.Client.TitleEntity.TileEntityTier1Key;
 import cpw.mods.fml.client.registry.ClientRegistry;
 
 public class ClientProxy extends CommonProxy{

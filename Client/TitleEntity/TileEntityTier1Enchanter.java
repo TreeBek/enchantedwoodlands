@@ -1,4 +1,4 @@
-package Mod.enchantedwoodlands.Render.TitleEntity;
+package Mod.enchantedwoodlands.Client.TitleEntity;
 
 import net.minecraft.tileentity.TileEntity;
 import Mod.enchantedwoodlands.Common.Common;

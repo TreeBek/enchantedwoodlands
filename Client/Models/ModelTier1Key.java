@@ -1,4 +1,4 @@
-package Mod.enchantedwoodlands.Render.Models;
+package Mod.enchantedwoodlands.Client.Models;
 
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;

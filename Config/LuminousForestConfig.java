@@ -10,6 +10,7 @@ public class LuminousForestConfig {
 		public static int swiftnessFruitID;
 		public static int tier1KeyID;
 		public static int mythicalStickID;
+		public static int spawnEggID;
 	
 	//Block ID
 		public static int woodlandPortalID;
@@ -60,6 +61,7 @@ public static void PreInit(FMLPreInitializationEvent event){
     swiftnessFruitID = config.get(Configuration.CATEGORY_ITEM, "Swiftness Fruit", 7003).getInt();
     tier1KeyID = config.get(Configuration.CATEGORY_ITEM, "Tier 1 Dungeon", 7004).getInt();
     mythicalStickID = config.get(Configuration.CATEGORY_ITEM, "Mythical Stick", 7005).getInt();
+    spawnEggID = config.get(Configuration.CATEGORY_ITEM, "Spawn Egg", 7006).getInt();
     config.save();
 	}
 	

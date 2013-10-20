@@ -3,10 +3,10 @@ package Mod.enchantedwoodlands.Blocks.LuminousForest;
 import java.util.List;
 import java.util.Random;
 
+import Mod.enchantedwoodlands.Client.TitleEntity.TileEntityTier1Enchanter;
 import Mod.enchantedwoodlands.Blocks.Blocks;
 import Mod.enchantedwoodlands.Common.Common;
 import Mod.enchantedwoodlands.Items.Items;
-import Mod.enchantedwoodlands.Render.TitleEntity.TileEntityTier1Enchanter;
 import cpw.mods.fml.common.Mod.Item;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

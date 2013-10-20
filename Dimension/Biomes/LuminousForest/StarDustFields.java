@@ -14,6 +14,7 @@ import Mod.enchantedwoodlands.Blocks.Blocks;
 import Mod.enchantedwoodlands.Dimension.Plants.LuminousForest.WorldGenExepditeTree;
 import Mod.enchantedwoodlands.Dimension.Plants.LuminousForest.WorldGenTestTree;
 import Mod.enchantedwoodlands.Dimension.Plants.LuminousForest.WorldGenWoodlandLongGrass;
+import Mod.enchantedwoodlands.Entity.EntityGoblin;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -53,7 +54,6 @@ this.maxHeight = 0.6F;
 
 this.rainfall = 100.0f;
 this.spawnableMonsterList.clear();
-this.spawnableMonsterList.add(new SpawnListEntry(EntityCreeper.class, 1, 500, 1000));
 this.spawnableCreatureList.clear();
 this.spawnableWaterCreatureList.clear();
 this.theBiomeDecorator.grassPerChunk = 400;

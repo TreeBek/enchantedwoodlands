@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.Random;
 
 import Mod.enchantedwoodlands.Blocks.Blocks;
+import Mod.enchantedwoodlands.Client.TitleEntity.TileEntityRedCrystal;
 import Mod.enchantedwoodlands.Common.Common;
-import Mod.enchantedwoodlands.Render.TitleEntity.TileEntityRedCrystal;
 import cpw.mods.fml.common.Mod.Item;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

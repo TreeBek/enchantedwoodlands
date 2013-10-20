@@ -22,6 +22,7 @@ import Mod.enchantedwoodlands.Dimension.Plants.LuminousForest.WorldGenTestHugeTr
 import Mod.enchantedwoodlands.Dimension.Plants.LuminousForest.WorldGenTestTree;
 import Mod.enchantedwoodlands.Dimension.Plants.LuminousForest.WorldGenWoodlandLongGrass;
 import Mod.enchantedwoodlands.Dimension.Structure.LuminousForest.CastleTier1Crystal;
+import Mod.enchantedwoodlands.Entity.EntityGoblin;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSand;
 import net.minecraft.entity.EnumCreatureType;
@@ -31,6 +32,7 @@ import net.minecraft.world.ChunkPosition;
 import net.minecraft.world.SpawnerAnimals;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraft.world.biome.SpawnListEntry;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.MapGenBase;
@@ -678,10 +680,10 @@ public class LuminousChunkProvider implements IChunkProvider {
 	}
 
 	@Override
-	public List getPossibleCreatures(EnumCreatureType enumcreaturetype, int i,
-			int j, int k) {
-		// TODO Auto-generated method stub
-		return null;
+	public List getPossibleCreatures(EnumCreatureType var1, int var2,int var3, int var4) {
+		
+		BiomeGenBase var5 = this.worldObj.getBiomeGenForCoords(var2, var4);
+        return var5 == null ? null : var5.getSpawnableList(var1);
 	}
 
 	@Override

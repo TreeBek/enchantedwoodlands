@@ -5,13 +5,10 @@ Mod by gruntpie224 and treebek
 
 TODO:
 ==================
-*Create Different Trees <br>
-*Add any missing textures <br>
-*Finish Tier I Dungeon <br>
-*Work on Adding Dark Knight Mobs for Dungeon <br>
-
+*Work on Adding Troll Mobs for Dungeon <br>
+*Add Structure for Portal entrance
+*Add First Set of tools
 
 BUGS:
 ==================
-*Sapling sounds like wood <br>
 *Swiftness Fruit generation is a bit off <br>

@@ -1,4 +1,4 @@
-package Mod.enchantedwoodlands.Render;
+package Mod.enchantedwoodlands.Client;
 
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
@@ -7,8 +7,8 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
 import Mod.enchantedwoodlands.Common.Common;
-import Mod.enchantedwoodlands.Render.Models.ModelTier1Key;
-import Mod.enchantedwoodlands.Render.TitleEntity.TileEntityTier1Key;
+import Mod.enchantedwoodlands.Client.Models.ModelTier1Key;
+import Mod.enchantedwoodlands.Client.TitleEntity.TileEntityTier1Key;
 
 
 public class TileEntityTier1KeyRenderer extends TileEntitySpecialRenderer

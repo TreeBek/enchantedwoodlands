@@ -1,12 +1,12 @@
-package Mod.enchantedwoodlands.Render.Renderer;
+package Mod.enchantedwoodlands.Client.ItemRender;
 
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.IItemRenderer;
 
 import org.lwjgl.opengl.GL11;
 
-import Mod.enchantedwoodlands.Render.Models.ModelRedCrystal;
-import Mod.enchantedwoodlands.Render.TitleEntity.TileEntityRedCrystal;
+import Mod.enchantedwoodlands.Client.Models.ModelRedCrystal;
+import Mod.enchantedwoodlands.Client.TitleEntity.TileEntityRedCrystal;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.tileentity.TileEntityRenderer;

@@ -1,12 +1,12 @@
-package Mod.enchantedwoodlands.Render.Renderer;
+package Mod.enchantedwoodlands.Client.ItemRender;
 
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.IItemRenderer;
 
 import org.lwjgl.opengl.GL11;
 
-import Mod.enchantedwoodlands.Render.Models.ModelTier1Key;
-import Mod.enchantedwoodlands.Render.TitleEntity.TileEntityTier1Key;
+import Mod.enchantedwoodlands.Client.Models.ModelTier1Key;
+import Mod.enchantedwoodlands.Client.TitleEntity.TileEntityTier1Key;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.tileentity.TileEntityRenderer;

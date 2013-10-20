@@ -5,7 +5,7 @@ import java.util.Random;
 
 import Mod.enchantedwoodlands.Common.Common;
 import Mod.enchantedwoodlands.Items.Items;
-import Mod.enchantedwoodlands.Render.TitleEntity.TileEntityTier1Key;
+import Mod.enchantedwoodlands.Client.TitleEntity.TileEntityTier1Key;
 import cpw.mods.fml.common.Mod.Item;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
